@@ -7,24 +7,17 @@
     <title>トップページ</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="../css/top.css">
+    <link rel="stylesheet" href="/src/css/countdown.css">
 </head>
 <body>
     
 <!-- ここからカウントダウン -->
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>新年カウントダウンタイマー</title>
-  <link rel="stylesheet" href="/src/css/countdown.css">
-</head>
-<body>
+
 
   <div class="container">
     <div class="countdown">
       <h1 class="countdown-title">Countdown to
-        <span id="ceremonyDay" class="new-year"></span>
+        <span id="ceremonyDay" class="ceremony-time"></span>
       </h1>
       <div class="time-container">
         <p class="time"><span id="days" class="time-num"></span>days</p>
@@ -34,6 +27,8 @@
       </div>
     </div>
   </div>
+  <!-- ここまでカウントダウン -->
+
 
   <script src="/src/js/countdown.js"></script>
 </body>

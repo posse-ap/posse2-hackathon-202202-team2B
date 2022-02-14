@@ -4,24 +4,24 @@ const days = document.getElementById('days');
 const hours = document.getElementById('hours');
 const minutes = document.getElementById('minutes');
 const seconds = document.getElementById('seconds');
-const ceremonyDay = document.getElementById('ceremonyDay');
+
 // 今年の値を取得
 const currentYear = new Date().getFullYear();
-// 入学式の値を取得
-const ceremony = "";
-// の1月1日00:00:00のDateオブジェクトを取得
-const ceremonyTime = new Date(`June 04 ${currentYear} 00:10:00`);
+// 入学式の六月四日10:00のDateオブジェクトを取得
+const ceremony = new Date(`June 04 ${currentYear} 10:00:00`);
+// 来年の1月1日00:00:00のDateオブジェクトを取得
+// const ceremonyTime = new Date(`January 01 ${nextYear} 00:00:00`);
 
 // 来年の値をDOMに追加
-ceremonyDay.innerText = ceremony;
-
+ceremonyDay.innerText = "入学式まであと!!";
+console.log(ceremony);
 
 // カウントダウンの関数
 function updateCountdown() {
   // 現在の時刻情報を取得する
   const currentTime = new Date();
   // 現在の時間と新年の時間の差を計算する（ミリ秒単位）
-  const diff = ceremonyTime - currentTime;
+  const diff = ceremony - currentTime;
 
   // 現在から新年までの日数を計算
   const d = Math.floor(diff / 1000 / 60 / 60 / 24);
