@@ -120,7 +120,7 @@ footer{
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    height: 40rem;
+    height: 80rem;
 }
 
 .company{
@@ -139,7 +139,7 @@ footer{
 footer{
     margin-top: 300rem;
     background-color: #FF5757;
-    height: 40rem;
+    height: 80rem;
 }
 
 .footer-introduction{
@@ -233,7 +233,7 @@ footer{
     position:absolute;
     font-family:sans-serif;
     bottom:0;
-    left:-25px;
+    left: -25px;
     right:-25px;
     padding:5px 7px;
     z-index:-1;
@@ -265,7 +265,7 @@ footer{
   /* text pops up when icon is in hover state */
   
 .sns a:hover span {
-    bottom:50px;
+    bottom:65px;
     visibility:visible;
     opacity:1;
   }
