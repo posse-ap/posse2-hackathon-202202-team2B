@@ -112,7 +112,7 @@ footer {
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  height: 40rem;
+  height: 80rem;
 }
 
 .company {
@@ -130,7 +130,7 @@ footer {
 footer {
   margin-top: 300rem;
   background-color: #FF5757;
-  height: 40rem;
+  height: 80rem;
 }
 
 .footer-introduction {
@@ -229,7 +229,7 @@ footer {
 /* pop-up text arrow */
 /* text pops up when icon is in hover state */
 .sns a:hover span {
-  bottom: 50px;
+  bottom: 65px;
   visibility: visible;
   opacity: 1;
 }
