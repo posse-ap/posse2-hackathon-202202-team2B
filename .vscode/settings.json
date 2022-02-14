@@ -1,3 +1,4 @@
 {
-    "dartsass.sassBinPath": "node_modules/sass/sass.js"
+    "dartsass.sassBinPath": "node_modules/sass/sass.js",
+    "liveServer.settings.port": 5501
 }
