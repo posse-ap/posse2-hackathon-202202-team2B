@@ -1,5 +1,108 @@
+@charset "UTF-8";
+html {
+  font-size: 6.25%;
+}
+
 body {
   background-color: aqua;
+}
+
+header {
+  height: 1.07rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+a {
+  cursor: pointer;
+}
+
+.logo {
+  height: 88rem;
+  background-color: #F2F5F9;
+  width: 100%;
+  text-align: center;
+  padding: 8rem 0rem 0rem 0rem;
+}
+
+header img {
+  height: 80rem;
+  width: 300rem;
+  object-fit: cover;
+}
+
+header ul {
+  height: 39rem;
+  background-color: #FF5757;
+  color: white;
+  display: flex;
+  font-size: 12.63rem;
+}
+
+.lists {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+header li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 38rem;
+  text-align: center;
+  font-size: 16.63rem;
+}
+
+.list {
+  color: white;
+}
+
+.hover_action {
+  position: relative;
+}
+
+.hover_action::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  padding-bottom: 1px;
+  background: white;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+.hover_action:hover::after {
+  transform: scale(1, 1);
+}
+
+@media (max-width: 600px) {
+  header .lists {
+    /* 横スクロールを表示 */
+    overflow-x: scroll;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  header li {
+    margin: 0rem;
+    padding: 10rem 60rem 10rem 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  header ul {
+    display: block;
+    padding: 0 16rem;
+  }
 }
 
 /*# sourceMappingURL=top.css.map */
