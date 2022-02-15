@@ -21,8 +21,7 @@ header, footer a {
 header img {
   height: 80rem;
   width: 300rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 header ul {
@@ -95,8 +94,7 @@ footer {
 .img2 {
   height: 80rem;
   width: 300rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 footer {
@@ -165,6 +163,9 @@ footer {
   width: 40px;
   height: 40px;
   margin: 0 25px;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-font-smoothing: antialiased;
 }
@@ -192,6 +193,9 @@ footer {
   background: #FF5757;
   visibility: hidden;
   opacity: 0;
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -267,9 +271,9 @@ footer {
     align-items: flex-end;
   }
 
-  .footer-introduction {
+  ul .footer-introduction {
     margin-bottom: 20rem;
-    margin-right: 20rem;
+    margin: 20rem;
   }
 
   .company {
@@ -297,4 +301,4 @@ html {
   font-size: 6.25%;
 }
 
-/*# sourceMappingURL=free.css.map */
+/*# sourceMappingURL=products.css.map */

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/src/reset.css">
-    <link rel="stylesheet" href="/src/css/free.css">
+    <link rel="stylesheet" href="/src/css/free-sass/free.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -22,6 +23,91 @@
           </div>
         </ul>
     </header>
+    <!-- ヘッダーのしたに隠れてしまうため、brで改行 -->
+<br><br><br><br><br><br><br><br><br><br><br>
+    <!--表紙 -->
+<section class="section section-blue js-section scrollify" data-section-name="section1">
+    <div class="section-content">
+        <div class="context">
+            <div class="wrap">
+            <h1>
+                もしあなたがPOSSE2にいたら、どんなキャラかな！？
+                <br><br>
+                一足先に確認しよう！
+            </h1>
+        </div>
+            <a class="wrap" href="#"><span></span></a>
+        </div>
+    
+        <div class="area" >
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+        </div >
+    </div>
+</section>
+
+ <!-- 性格診断 -->
+<!-- <section class="section section-red js-section scrollify" data-section-name="section2">
+    <div class="section-content"> -->
+        <section class="personality_contents">
+            <div class="personality_area">
+                <form name="form1" id="Q">
+                    <p>以下の問いに答え、診断してみよう！</p>
+                    <br>
+                    <p>設問1　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。
+                    <br>
+                    <br>
+                    <input name="q1" type="radio" value="1"> 様子見をして、自ら積極的に近づくことは少なく、どちらかというと引っ込み思案の方だ。
+                    <br>
+                    <br>
+                    <input name="q1" type="radio" value="2"> チーム活動では自ら仕切役をすることがよくある。
+                    <br>
+                    <br>
+                    <input name="q1" type="radio" value="3"> チームワークを重視し、いつの間にか頼まれて、まとめ役をすることがある。
+                    </p>
+                    <br>
+                    <br>
+                    <p>設問2　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。         
+                    <br>
+                    <br>
+                    <input name="q2" type="radio" value="13"> 競う気持ちが旺盛で良い評価を得るために効率を旨に活動する主役。
+                    <br>
+                    <br>
+                    <input name="q2" type="radio" value="17"> 他人の思惑をあまり気にせずに思ったことは臆せずズバリという直言居士。
+                    <br>
+                    <br>
+                    <input name="q2" type="radio" value="23"> 楽しいこと興味あることに次々と飛びつき熱中するノリのよい楽天家。
+                    </p>
+                </form>
+                
+                <button id="openModal" onclick="answer();">診断！</button>
+                <div class="answer_box">
+                    <p class="anata">もしあなたがPOSSE２にいたら、、、</p> 
+                    <button class="reLoad" type="button" onclick="radioDeselection()">やり直す</button>
+                    <div　class="fadeUp" id="kotae">
+                        <br>
+                        <p >「<div class="kakko"></div>」</p>
+                    </div>
+                    <div class="enia">
+                        <p>※「エニアグラム」という科学的な根拠に基づいた性格診断となっています。</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    <!-- </div>
+</section> -->
+
     <!-- ここからフッター -->
     <footer>
         <div class="footer">
@@ -49,5 +135,6 @@
           <a href="https://posse-ap.com/">POSSE公式サイト</a>
         </div> -->
       </footer>
+      <script src="/src/js/free.js"></script>
 </body>
 </html>
