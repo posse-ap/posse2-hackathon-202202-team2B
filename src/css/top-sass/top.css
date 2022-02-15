@@ -23,8 +23,7 @@ header, footer a {
 header img {
   height: 80rem;
   width: 300rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 header ul {
@@ -97,8 +96,7 @@ footer {
 .img2 {
   height: 80rem;
   width: 300rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 footer {
@@ -167,6 +165,9 @@ footer {
   width: 40px;
   height: 40px;
   margin: 0 25px;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-font-smoothing: antialiased;
 }
@@ -194,6 +195,9 @@ footer {
   background: #FF5757;
   visibility: hidden;
   opacity: 0;
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -228,7 +232,7 @@ footer {
   }
 
   .sns {
-    width: 800rem;
+    width: 400rem;
     text-align: center;
     margin: 0 auto;
   }
@@ -247,7 +251,7 @@ footer {
 
   .company {
     margin: 0 auto;
-    width: 800rem;
+    width: 400rem;
     text-align: center;
   }
 
@@ -460,6 +464,7 @@ button.btn {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   text-align: center;
   vertical-align: middle;
@@ -577,8 +582,7 @@ button.btn {
 
   #message2 {
     margin: 20rem;
-    -webkit-text-decoration: block;
-            text-decoration: block;
+    text-decoration: block;
   }
 
   .closeModal {

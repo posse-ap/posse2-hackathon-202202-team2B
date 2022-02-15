@@ -21,8 +21,7 @@ header, footer a {
 header img {
   height: 80rem;
   width: 300rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 header ul {
@@ -95,8 +94,7 @@ footer {
 .img2 {
   height: 80rem;
   width: 300rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 footer {
@@ -165,6 +163,9 @@ footer {
   width: 40px;
   height: 40px;
   margin: 0 25px;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-font-smoothing: antialiased;
 }
@@ -192,6 +193,9 @@ footer {
   background: #FF5757;
   visibility: hidden;
   opacity: 0;
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -226,7 +230,7 @@ footer {
   }
 
   .sns {
-    width: 800rem;
+    width: 400rem;
     text-align: center;
     margin: 0 auto;
   }
@@ -245,7 +249,7 @@ footer {
 
   .company {
     margin: 0 auto;
-    width: 800rem;
+    width: 400rem;
     text-align: center;
   }
 
@@ -313,12 +317,9 @@ html {
   font-size: 16px;
 }
 .timeline-list-item-1 {
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 .timeline-list-item-1 .date {
@@ -346,15 +347,11 @@ html {
   border-radius: 10px;
 }
 .timeline-list-item-2 {
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   opacity: 0;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .timeline-list-item-2 .date {
   width: 20%;
@@ -381,15 +378,11 @@ html {
   border-radius: 10px;
 }
 .timeline-list-item-3 {
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   opacity: 0;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .timeline-list-item-3 .date {
   width: 20%;
@@ -416,15 +409,11 @@ html {
   border-radius: 10px;
 }
 .timeline-list-item-4 {
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   opacity: 0;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 .timeline-list-item-4 .date {
   width: 20%;
@@ -521,15 +510,6 @@ html {
   opacity: 1;
 }
 
-@-webkit-keyframes fadeInAnime {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeInAnime {
   from {
     opacity: 0;
@@ -540,20 +520,16 @@ html {
 }
 .timeline img {
   position: absolute;
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 
 .image-1 {
   width: 370rem;
   height: 220rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   top: 50rem;
   left: -330rem;
 }
@@ -561,43 +537,46 @@ html {
 .image-2 {
   width: 300rem;
   height: 320rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   top: 200rem;
   left: 600rem;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .image-3 {
   width: 370rem;
   height: 220rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   top: 400rem;
   left: -330rem;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 .image-4 {
   width: 370rem;
   height: 220rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   top: 600rem;
   left: 600rem;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 
 .image-5 {
   width: 370rem;
   height: 220rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   top: 800rem;
   left: -330rem;
+}
+
+@media screen and (max-width: 1350px) {
+  .timeline {
+    margin: 0;
+  }
+
+  .timeline-list {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=ayumi.css.map */
