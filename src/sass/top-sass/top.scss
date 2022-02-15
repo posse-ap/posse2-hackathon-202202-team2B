@@ -107,18 +107,283 @@ header li{
     }
 }
 
+// ここからタイムライン
+.timeline {
+    width: 96%;
+    max-width: 600px;
+    margin: 130px auto;
+    position: relative;
+    // border: 1px solid #eeeeee;
+    
+    &-list {
+        padding: 40px 0;
+        padding-left: 80px;
+        
+        &-item {
+            display: flex;
+            line-height: 1.5;
+            font-size: 16px;
+
+        &-1{
+            animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-2{
+            animation-name:fadeInAnime;
+            animation-duration:1s;
+            animation-fill-mode:forwards;
+            opacity:0;
+            animation-delay: 0.3s;
+  
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-3{
+            animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+            animation-delay: 0.6s;
+
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-4{
+            animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+            animation-delay: 0.9s;      
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-5{
+           
+          
+            opacity : 0;
+            transition: opacity 1s;
+
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-6{
+           
+          
+            opacity : 0;
+            transition: opacity 1s;
+
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #000;
+                    border-radius: 10px;
+                }
+            }
+        }
+            .view{
+                opacity: 1;
+            }
+            
+        }
+    }
+}
+
+
+.fade{
+    margin-top: 80vh;
+    text-align: center;
+    opacity : 0;
+    transition: opacity 3s;
+  }
+   
+  .fade.view{
+    opacity: 1;
+  }
+
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .timeline img{
+    position: absolute;
+    animation-name:fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+  }
+
+  .image-1{
+      width: 370rem;
+      height: 220rem;
+      object-fit: cover;
+      top: 100rem;
+      left: -330rem;
+  }
+
 
 // ここからfooter
 
 footer{
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
     width: 100%;
+    z-index: -1;
+
 }
 .footer{
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    justify-content: space-around;
+    // text-align: center;
     align-items: center;
     height: 80rem;
 }
@@ -126,6 +391,7 @@ footer{
 .company{
     margin-left: 40rem;
     font-size: 16rem;
+    width: 400rem;
 }
 
 .img2{
@@ -146,11 +412,12 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 40rem;
+    margin-right: 20rem;
+    width: 400rem;
 }
 
 .footer-introduction li {
-    margin-right: 30rem;
+    margin-right: 10rem;
     font-size: 14px;
     color: #fff;
 }
@@ -178,17 +445,20 @@ footer{
 .introduce:hover::after {
     transform: scale(1, 1);
 }
+
+
 // ここからボタン
 .sns {
     display: inline-block;
-    position:absolute;
-    top:50%;
-    left:50%;
-    -ms-transform:translate(-50%,-50%);
-    -webkit-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%);
+    // position:absolute;
+    // top:50%;
+    // left:50%;
+    // -ms-transform:translate(-50%,-50%);
+    // -webkit-transform:translate(-50%,-50%);
+    // transform:translate(-50%,-50%);
     text-align: center;
-    width: 600rem;
+    width: 400rem;
+    margin: 0 auto;
   }
   
   /* Icons */
@@ -287,26 +557,37 @@ background-color: #d6d6d6;;
 
 
 // フッターのレスポンシブ
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1170px) {
     footer{
         height: 100rem;
 
     }
     .sns{
-        top: 30%;
+        width: 800rem;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .footer{
         height: 100rem;
         align-items: flex-end;
+        flex-wrap: wrap;
     }
 
     .footer-introduction{
-        margin-bottom: 20rem;
+        margin: 0 auto 20rem auto;
+        width: 400rem;
+        text-align: center;
     }
 
     .company{
-        margin-bottom: 20rem;
+        margin: 0 auto;
+        width: 800rem;
+        text-align: center;
+    }
+
+    .sns a:hover span {
+        visibility: hidden;
     }
  }
 
@@ -345,5 +626,7 @@ background-color: #d6d6d6;;
     .footer-introduction li {
         margin-right: 10rem;
     }
-
+    .sns a:hover span {
+        visibility: hidden;
+    }
  }

@@ -101,16 +101,275 @@ header li {
     padding: 0 16rem;
   }
 }
-footer {
+.timeline {
+  width: 96%;
+  max-width: 600px;
+  margin: 130px auto;
+  position: relative;
+}
+.timeline-list {
+  padding: 40px 0;
+  padding-left: 80px;
+}
+.timeline-list-item {
+  display: flex;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.timeline-list-item-1 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+.timeline-list-item-1 .date {
+  width: 20%;
+  padding: 0 0 0 20px;
+  color: #888888;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.timeline-list-item-1 .content {
+  position: relative;
+  width: 80%;
+  padding: 0 20px 60px 30px;
+  border-left: 1px solid #aaaaaa;
+  white-space: nowrap;
+}
+.timeline-list-item-1 .content::before {
+  content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #00c2bc;
+  border-radius: 10px;
+}
+.timeline-list-item-2 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.timeline-list-item-2 .date {
+  width: 20%;
+  padding: 0 0 0 20px;
+  color: #888888;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.timeline-list-item-2 .content {
+  position: relative;
+  width: 80%;
+  padding: 0 20px 60px 30px;
+  border-left: 1px solid #aaaaaa;
+  white-space: nowrap;
+}
+.timeline-list-item-2 .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #00c2bc;
+  border-radius: 10px;
+}
+.timeline-list-item-3 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.timeline-list-item-3 .date {
+  width: 20%;
+  padding: 0 0 0 20px;
+  color: #888888;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.timeline-list-item-3 .content {
+  position: relative;
+  width: 80%;
+  padding: 0 20px 60px 30px;
+  border-left: 1px solid #aaaaaa;
+  white-space: nowrap;
+}
+.timeline-list-item-3 .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #00c2bc;
+  border-radius: 10px;
+}
+.timeline-list-item-4 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.timeline-list-item-4 .date {
+  width: 20%;
+  padding: 0 0 0 20px;
+  color: #888888;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.timeline-list-item-4 .content {
+  position: relative;
+  width: 80%;
+  padding: 0 20px 60px 30px;
+  border-left: 1px solid #aaaaaa;
+  white-space: nowrap;
+}
+.timeline-list-item-4 .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #00c2bc;
+  border-radius: 10px;
+}
+.timeline-list-item-5 {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.timeline-list-item-5 .date {
+  width: 20%;
+  padding: 0 0 0 20px;
+  color: #888888;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.timeline-list-item-5 .content {
+  position: relative;
+  width: 80%;
+  padding: 0 20px 60px 30px;
+  border-left: 1px solid #aaaaaa;
+  white-space: nowrap;
+}
+.timeline-list-item-5 .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #00c2bc;
+  border-radius: 10px;
+}
+.timeline-list-item-6 {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.timeline-list-item-6 .date {
+  width: 20%;
+  padding: 0 0 0 20px;
+  color: #888888;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.timeline-list-item-6 .content {
+  position: relative;
+  width: 80%;
+  padding: 0 20px 60px 30px;
+  border-left: 1px solid #aaaaaa;
+  white-space: nowrap;
+}
+.timeline-list-item-6 .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 10px;
+}
+.timeline-list-item .view {
+  opacity: 1;
+}
+
+.fade {
+  margin-top: 80vh;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.fade.view {
+  opacity: 1;
+}
+
+@-webkit-keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.timeline img {
+  position: absolute;
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.image-1 {
+  width: 370rem;
+  height: 220rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 100rem;
+  left: -330rem;
+}
+
+footer {
   width: 100%;
+  z-index: -1;
 }
 
 .footer {
   display: flex;
-  justify-content: space-between;
-  text-align: center;
+  justify-content: space-around;
   align-items: center;
   height: 80rem;
 }
@@ -118,6 +377,7 @@ footer {
 .company {
   margin-left: 40rem;
   font-size: 16rem;
+  width: 400rem;
 }
 
 .img2 {
@@ -136,11 +396,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 40rem;
+  margin-right: 20rem;
+  width: 400rem;
 }
 
 .footer-introduction li {
-  margin-right: 30rem;
+  margin-right: 10rem;
   font-size: 14px;
   color: #fff;
 }
@@ -174,12 +435,9 @@ footer {
 
 .sns {
   display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  width: 600rem;
+  width: 400rem;
+  margin: 0 auto;
 }
 
 /* Icons */
@@ -250,26 +508,37 @@ footer {
   background-color: #d6d6d6;
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1170px) {
   footer {
     height: 100rem;
   }
 
   .sns {
-    top: 30%;
+    width: 800rem;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .footer {
     height: 100rem;
     align-items: flex-end;
+    flex-wrap: wrap;
   }
 
   .footer-introduction {
-    margin-bottom: 20rem;
+    margin: 0 auto 20rem auto;
+    width: 400rem;
+    text-align: center;
   }
 
   .company {
-    margin-bottom: 20rem;
+    margin: 0 auto;
+    width: 800rem;
+    text-align: center;
+  }
+
+  .sns a:hover span {
+    visibility: hidden;
   }
 }
 @media screen and (max-width: 610px) {
@@ -306,6 +575,10 @@ footer {
 
   .footer-introduction li {
     margin-right: 10rem;
+  }
+
+  .sns a:hover span {
+    visibility: hidden;
   }
 }
 
