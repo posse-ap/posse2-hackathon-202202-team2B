@@ -1,0 +1,89 @@
+html{
+    font-size: 6.25%;
+}
+
+body{
+background-color: aqua;
+
+}
+
+// ヘッダー
+header{
+    height:1.07rem;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 1;
+}
+
+a{
+    cursor: pointer;
+}
+
+.logo {
+    height: 88.0rem;
+    background-color: #F2F5F9;
+    width: 100%;
+    text-align: center;
+    // margin:0 120rem;
+    padding:8rem 0rem 0rem 0rem;
+}
+
+header img{
+    height: 80rem;
+    width: 300rem;
+    object-fit: cover;
+}
+
+header ul{
+    height: 39rem;
+    background-color: #333333;
+    color: white;
+    display: flex;
+    font-size: 12.63rem;
+}
+
+.lists{
+    // margin: 0 135rem;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+header li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 58rem;
+    text-align: center;
+    font-size: 12.63rem;
+}
+
+.list{
+    color: white;
+}
+
+
+
+@media(max-width:600px) {
+    header .lists{
+    /* 横スクロールを表示 */
+    overflow-x: scroll;
+    margin: 0;
+    white-space: nowrap;
+    }
+
+    header  li{
+        margin: 0rem;
+        padding: 10rem 60rem 10rem 0;
+    }
+
+    .logo{
+        margin: 0;
+    }
+
+    header ul{
+        display: block;
+        padding: 0 16rem;
+    }
+}
