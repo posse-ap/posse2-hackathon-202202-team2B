@@ -1,0 +1,597 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+header {
+  height: 1.07rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+header, footer a {
+  cursor: pointer;
+}
+
+.logo {
+  height: 88rem;
+  background-color: #F2F5F9;
+  width: 100%;
+  text-align: center;
+  padding: 8rem 0rem 0rem 0rem;
+}
+
+header img {
+  height: 80rem;
+  width: 300rem;
+  object-fit: cover;
+}
+
+header ul {
+  height: 39rem;
+  background-color: #FF5757;
+  color: white;
+  display: flex;
+  font-size: 12.63rem;
+}
+
+.lists {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+header li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 38rem;
+  text-align: center;
+  font-size: 16.63rem;
+}
+
+.list {
+  color: white;
+}
+
+.hover_action {
+  position: relative;
+}
+
+.hover_action::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  padding-bottom: 1px;
+  background: white;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+.hover_action:hover::after {
+  transform: scale(1, 1);
+}
+
+footer {
+  width: 100%;
+  z-index: -1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80rem;
+}
+
+.company {
+  margin-left: 40rem;
+  font-size: 16rem;
+  width: 400rem;
+}
+
+.img2 {
+  height: 80rem;
+  width: 300rem;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #FF5757;
+  height: 80rem;
+}
+
+.footer-introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20rem;
+  width: 400rem;
+}
+
+.footer-introduction li {
+  margin-right: 10rem;
+  font-size: 14px;
+  color: #fff;
+}
+
+.official {
+  text-align: center;
+  font-size: 20rem;
+}
+
+.introduce {
+  position: relative;
+}
+
+.introduce::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  padding-bottom: 1px;
+  background: white;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+.introduce:hover::after {
+  transform: scale(1, 1);
+}
+
+.sns {
+  display: inline-block;
+  text-align: center;
+  width: 400rem;
+  margin: 0 auto;
+}
+
+/* Icons */
+.sns a {
+  color: #fff;
+  background: #FF5757;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-family: fontawesome;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 25px;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sns img {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: 4rem;
+  right: 4rem;
+}
+
+/* pop-up text */
+.sns a span {
+  color: #fff;
+  position: absolute;
+  font-family: sans-serif;
+  bottom: 0;
+  left: -25px;
+  right: -25px;
+  padding: 5px 7px;
+  z-index: -1;
+  font-size: 14px;
+  border-radius: 50px;
+  background: #FF5757;
+  visibility: hidden;
+  opacity: 0;
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* pop-up text arrow */
+/* text pops up when icon is in hover state */
+.sns a:hover span {
+  bottom: 65px;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* font awesome icons */
+.sns a:nth-of-type(1):hover {
+  background-color: #1da1f1;
+}
+
+.sns a:nth-of-type(2):hover {
+  background-color: #dd3367;
+}
+
+.sns a:nth-of-type(3):hover {
+  background-color: #02c153;
+}
+
+.sns a:nth-of-type(4):hover {
+  background-color: #d6d6d6;
+}
+
+@media screen and (max-width: 1170px) {
+  footer {
+    height: 100rem;
+  }
+
+  .sns {
+    width: 400rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .footer {
+    height: 100rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .footer-introduction {
+    margin: 0 auto 20rem auto;
+    width: 400rem;
+    text-align: center;
+  }
+
+  .company {
+    margin: 0 auto;
+    width: 400rem;
+    text-align: center;
+  }
+
+  .sns a:hover span {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 610px) {
+  footer {
+    height: 100rem;
+  }
+
+  .sns {
+    top: 30%;
+  }
+
+  .footer {
+    height: 100rem;
+    align-items: flex-end;
+  }
+
+  .footer-introduction {
+    margin-bottom: 20rem;
+    margin-right: 20rem;
+  }
+
+  .company {
+    margin-bottom: 20rem;
+    margin-left: 20rem;
+  }
+
+  .sns {
+    width: 200rem;
+  }
+
+  .sns a {
+    margin: 0rem;
+  }
+
+  .footer-introduction li {
+    margin-right: 10rem;
+  }
+
+  .sns a:hover span {
+    visibility: hidden;
+  }
+}
+html {
+  font-size: 6.25%;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.quiz-wrapper {
+  background-color: #FF5757;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400rem;
+}
+
+.quiz-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10rem 2rem rgba(100, 100, 100, 0.1);
+  overflow: hidden;
+  width: 800rem;
+  max-width: 100%;
+}
+
+#quiz-header {
+  padding: 40rem;
+}
+
+.questions li {
+  margin: 10rem 0;
+}
+
+ul li input {
+  cursor: pointer;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+#question {
+  font-size: 20rem;
+}
+
+.questions {
+  font-size: 20rem;
+}
+
+button {
+  background-color: #304dec;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 20rem;
+  width: 100%;
+  padding: 13rem 13rem 13rem 40rem;
+}
+
+button:hover {
+  background-color: #233bc4;
+}
+
+#results-container {
+  display: none;
+  align-items: center;
+}
+
+#results-header {
+  text-align: center;
+  justify-content: center;
+}
+
+#results {
+  padding: 20rem 0;
+  font-size: 20rem;
+}
+
+#message {
+  display: none;
+  font-size: 20rem;
+  color: black;
+  background-color: white;
+}
+
+#message2 {
+  display: none;
+  font-size: 20rem;
+  font-weight: bold;
+  color: blue;
+  background-color: white;
+  margin: 20rem 200rem;
+  position: relative;
+  text-decoration: none;
+}
+
+#message2::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+#message2:hover::after {
+  transform: scale(1, 1);
+}
+
+/* モーダルCSS */
+#openModal {
+  font-size: 20rem;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0 10rem;
+  display: block;
+  width: 300px;
+  height: 70px;
+  margin: 40px auto 0;
+  color: #fff;
+  background: #FF5757;
+  box-shadow: 0 8px 15px 0 #000;
+  transition: 0.3s;
+  border-radius: 20rem;
+}
+
+#openModal:hover {
+  box-shadow: none;
+  transform: translate3d(0, 8px, 0);
+}
+
+.quiz_title {
+  display: flex;
+  flex-direction: column;
+  background-color: #FF5757;
+  padding: 30rem;
+  font-size: 30rem;
+  color: white;
+}
+
+.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  height: 4.2rem;
+  flex-direction: row;
+}
+
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalArea_loading {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.6);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 57rem;
+  max-width: 100%;
+  padding: 1rem 0rem;
+  background-color: #fff;
+  border-radius: 3rem;
+}
+
+.modalWrapper .first_container {
+  margin-top: 2.5rem;
+}
+
+.modalWrapper .second_container {
+  margin-top: 2.5rem;
+}
+
+.closeModal {
+  position: absolute;
+  top: 1rem;
+  right: 40rem;
+  cursor: pointer;
+  font-size: 100rem;
+  color: white;
+  border-radius: 50%;
+  width: 50rem;
+  height: 50rem;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  header .lists {
+    /* 横スクロールを表示 */
+    overflow-x: scroll;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  header li {
+    margin: 0rem;
+    padding: 10rem 60rem 10rem 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  header ul {
+    display: block;
+    padding: 0 16rem;
+  }
+
+  .quiz-wrapper {
+    height: 400rem;
+  }
+
+  .modalWrapper {
+    background-color: #FF5757;
+  }
+
+  .modalWrapper {
+    width: 100%;
+    height: 85%;
+    top: 55%;
+    padding: 0;
+  }
+
+  .quiz_title {
+    font-size: 25rem;
+  }
+
+  #message2 {
+    margin: 20rem;
+    text-decoration: block;
+  }
+
+  .closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 20rem;
+    cursor: pointer;
+    font-size: 50rem;
+  }
+}
+
+/*# sourceMappingURL=top.css.map */
