@@ -509,12 +509,12 @@ html {
 .timeline-list-item-6 .content::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -10rem;
-  width: 20rem;
-  height: 20rem;
+  top: -5rem;
+  left: -15rem;
+  width: 30rem;
+  height: 30rem;
   background-color: red;
-  border-radius: 10rem;
+  border-radius: 15rem;
 }
 .timeline-list-item-7 {
   opacity: 0;
@@ -567,13 +567,31 @@ html {
     opacity: 1;
   }
 }
+a.btn--red {
+  background-color: #FF5757;
+  margin-top: 8rem;
+}
+
+a.btn-c:hover {
+  background-color: orange;
+}
+
+a.btn-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 6rem 12rem 12rem 6rem;
+  color: #fff;
+  border-radius: 100vh;
+}
+
 .timeline img {
   position: absolute;
   animation-name: fadeInAnime;
   animation-duration: 3s;
   animation-fill-mode: forwards;
   opacity: 0;
-  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
 }
 
 .image-1 {
@@ -582,6 +600,7 @@ html {
   object-fit: cover;
   top: 0rem;
   left: -410rem;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
 }
 
 .image-2 {
@@ -591,15 +610,17 @@ html {
   top: 0rem;
   left: 550rem;
   animation-delay: 0.3s;
+  border-radius: 60% 60% 70% 50%/70% 50% 30% 40%;
 }
 
 .image-3 {
-  width: 370rem;
-  height: 250rem;
+  width: 350rem;
+  height: 270rem;
   object-fit: cover;
   top: 30rem;
   left: -410rem;
   animation-delay: 0.6s;
+  border-radius: 30% 70% 60% 40%/30% 40% 60% 40%;
 }
 
 .image-4 {
@@ -609,6 +630,7 @@ html {
   top: 50rem;
   left: 550rem;
   animation-delay: 0.9s;
+  border-radius: 40% 60% 60% 40%/50% 40% 60% 50%;
 }
 
 .image-5 {
@@ -617,6 +639,17 @@ html {
   object-fit: cover;
   top: 70rem;
   left: -410rem;
+  border-radius: 70% 30% 30% 70%/70% 70% 30% 30%;
+}
+
+.image-6 {
+  width: 350rem;
+  height: 250rem;
+  object-fit: cover;
+  top: 50rem;
+  left: 550rem;
+  animation-delay: 0.9s;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
 }
 
 @media screen and (max-width: 1350px) {
@@ -663,6 +696,13 @@ html {
     top: 60rem;
     left: 500rem;
   }
+
+  .image-6 {
+    width: 250rem;
+    height: 170rem;
+    top: 90rem;
+    left: 580rem;
+  }
 }
 @media screen and (max-width: 1100px) {
   .timeline {
@@ -697,6 +737,11 @@ html {
   .image-5 {
     width: 300rem;
     height: 250rem;
+  }
+
+  .image-6 {
+    width: 290rem;
+    height: 200rem;
   }
 
   .timeline img {
@@ -744,6 +789,11 @@ html {
   .image-5 {
     width: 250rem;
     height: 180rem;
+  }
+
+  .image-6 {
+    width: 250rem;
+    height: 170rem;
   }
 
   .timeline img {
