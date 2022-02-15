@@ -7,7 +7,7 @@
     <title>トップページ</title>
     <link rel="stylesheet" href="/src/reset.css">
     <link rel="stylesheet" href="../css/top-sass/top.css">
-    <script type="module" src="/src/js/index.js" defer></script>
+    <script type="module" src="/src/js/main.js" defer></script>
     
 </head>
 <body>
@@ -24,11 +24,62 @@
         </div>
       </ul>
     </header>
+
+    <!-- ここからスライドショー -->
+
+    <div class="main">
+      <section class="section section-red js-section" data-section-name="section1">
+     
+        <div class="section-contentainer">
+ 
+
+        </div>
+   
+           
+  
+      </section>
+      
+      <section class="section section-blue js-section" data-section-name="section2">
+        <div class="section-contentainer">
+          <div class="section-content">
+            
+          </div>
+          
+        </div>
+        
+       
+        
+      </section>
+      <section class="section section-green js-section" data-section-name="section3">
+        <div class="section-contentainer">
+          <div class="section-content">
+            
+          </div>
+        </div>
+       
+       
+        </section>
+      <section class="section section-green js-section" data-section-name="section3">
+        <div class="section-contentainer">
+          <div class="section-content">
+            
+          </div>
+        </div>
+       
+       
+        </section>
+      <ul class="pager" id="js-pager"></ul>
+    </div>
+
 <!-- ヘッダーのしたに隠れてしまうため、brで改行 -->
-<br><br><br><br><br><br><br><br><br><br><br>
+
 
 
 <!-- クイズ -->
+<section class="js-section">
+  <p>POSSE2の特徴を掴めたかな？</p>
+  <p>POSSE2をご参加希望の方はこちらへ</p>
+  
 <button class="btn record_register " id="openModal"><span>〜クイズ〜 <br/>　POSSE2の特徴を掴もう！</span></button>
 <section id="modalArea" class="modalArea">
     <div id="modalBg" class="modalBg"></div>
@@ -107,7 +158,10 @@
       </div>
       
     </footer>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
+
 <script src="../js/main.js"></script>
   </body>
 </html>

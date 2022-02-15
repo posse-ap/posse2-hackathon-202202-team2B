@@ -1,8 +1,11 @@
 @use "../partial-sass/header";
 @use "../partial-sass/footer";
+@use "./scroll";
 html{
     font-size: 6.25%;
+    background: fixed;
 }
+
 
 body{
     font-family: 'Source Sans Pro', sans-serif;

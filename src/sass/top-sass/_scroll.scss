@@ -1,0 +1,197 @@
+.main {
+    position: relative;
+  }
+  .pager {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0;
+    li {
+      display: block;
+      margin: 20px;
+      a {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 50%;
+      }
+    }
+    .is-current {
+      a {
+        background: #232323;
+      }
+    }
+  }
+  .image-container{
+width: 100vw;
+height: 100vh;
+justify-content: center;
+
+
+  }
+  
+  
+  
+  // ===========================
+  // section
+  // ------------------------------
+  .section {
+    transition: opacity .5s ease .75s;
+      opacity: 0;
+    width: 100%;
+    &.is-show {
+        opacity: 1;
+      
+    }
+  }
+  .section-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    text-align: center;
+    opacity: 0;
+    width: 100vw;
+    transition: opacity .5s ease .75s;
+  }
+  
+  h2 {
+    color: #232323;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  h3 {
+    color: #232323;
+  }
+  
+  p {
+    color: #232323;
+  }
+  
+  .section-red {
+   background-image: url("../../image/LINE_ALBUM_220215.jpg");
+   background-position: center;
+   .fade-up {
+    animation-name: fadeUpAnime;/*アニメーションの定義名*/
+    animation-duration:3s;/*アニメーション変化時間 ※デフォルト*/
+    animation-fill-mode:forwards;/*アニメーションの開始と終了時の状態を指定*/
+    animation-delay: 2s;
+    opacity:0;
+    top: 10%;
+    position: absolute;
+    font-size: 80px;
+    color: #fff;
+    
+    }
+    
+    /*アニメーションの開始から終了までを指定する*/
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+    
+
+  }
+  
+  .section-blue {
+    background-image: url("../../image/hackathon.jpg");
+    background-position: center;
+    .fade-up {
+        animation-name: fadeUpAnime;/*アニメーションの定義名*/
+        animation-duration:3s;/*アニメーション変化時間 ※デフォルト*/
+        animation-fill-mode:forwards;/*アニメーションの開始と終了時の状態を指定*/
+        animation-delay: 2s;
+        opacity:0;
+        top: 50%;
+        position: absolute;
+        font-size: 80px;
+        color: #fff;
+        
+        }
+        
+        /*アニメーションの開始から終了までを指定する*/
+        @keyframes fadeUpAnime{
+          from {
+            opacity: 0;
+          transform: translateY(100px);
+          }
+        
+          to {
+            opacity: 1;
+          transform: translateY(0);
+          }
+        }
+        
+  }
+  
+  .section-green {
+    background-image: url("../../image/rookie_hackathon.jpg");
+    background-position: center;
+    .fade-up {
+        .fade-up {
+            animation-name: fadeUpAnime;/*アニメーションの定義名*/
+            animation-duration:3s;/*アニメーション変化時間 ※デフォルト*/
+            animation-fill-mode:forwards;/*アニメーションの開始と終了時の状態を指定*/
+            animation-delay: 2s;
+            opacity:0;
+            top: 80%;
+            position: absolute;
+            font-size: 80px;
+            color: #fff;
+            
+            }
+            
+            /*アニメーションの開始から終了までを指定する*/
+            @keyframes fadeUpAnime{
+              from {
+                opacity: 0;
+              transform: translateY(100px);
+              }
+            
+              to {
+                opacity: 1;
+              transform: translateY(0);
+              }
+            }
+            
+        }
+        
+  }
+
+// fade-inの処理
+// .fade-up {
+//     animation-name: fadeUpAnime;/*アニメーションの定義名*/
+//     animation-duration:3s;/*アニメーション変化時間 ※デフォルト*/
+//     animation-fill-mode:forwards;/*アニメーションの開始と終了時の状態を指定*/
+//     animation-delay: 2s;
+//     opacity:0;
+//     top: 50%;
+//     position: absolute;
+//     font-size: 80px;
+//     color: #fff;
+    
+//     }
+    
+//     /*アニメーションの開始から終了までを指定する*/
+//     @keyframes fadeUpAnime{
+//       from {
+//         opacity: 0;
+//       transform: translateY(100px);
+//       }
+    
+//       to {
+//         opacity: 1;
+//       transform: translateY(0);
+//       }
+//     }
+    
