@@ -1,0 +1,17 @@
+body{
+background-color: aqua;
+
+}
+
+// ヘッダー
+header{
+    height:1.07rem;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 1;
+}
+
+a{
+    cursor: pointer;
+}
