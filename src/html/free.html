@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/reset.css">
     <link rel="stylesheet" href="/src/css/free-sass/free.css">
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script> -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
             <li><a href="/src/html/top.html" class="list hover_action">Home</a></li>
             <li><a href="/src/html/ayumi.html" class="list hover_action">Timeline</a></li>
             <li><a href="/src/html/products.html" class="list hover_action">Products</a></li>
-            <li><a href="/src/html/free.html" class="list hover_action">Free</a></li>
+            <li><a href="/src/html/free.html" class="list hover_action">Diagnose</a></li>
           </div>
         </ul>
     </header>
@@ -64,7 +65,10 @@
                 <form name="form1" id="Q">
                     <p>以下の問いに答え、診断してみよう！</p>
                     <br>
-                    <p>設問1　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。
+                    <p><div class="abc">
+                      設問1　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。
+                    </div>
+                      
                     <br>
                     <br>
                     <input name="q1" type="radio" value="1"> 様子見をして、自ら積極的に近づくことは少なく、どちらかというと引っ込み思案の方だ。
@@ -77,7 +81,9 @@
                     </p>
                     <br>
                     <br>
-                    <p>設問2　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。         
+                    <p ><div class="abc">
+                      設問2　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。
+                    </div>         
                     <br>
                     <br>
                     <input name="q2" type="radio" value="13"> 競う気持ちが旺盛で良い評価を得るために効率を旨に活動する主役。
@@ -94,17 +100,30 @@
                 <div class="answer_box">
                     <p class="anata">もしあなたがPOSSE２にいたら、、、</p> 
                     <button class="reLoad" type="button" onclick="radioDeselection()">やり直す</button>
-                    <div　class="fadeUp" id="kotae">
+                    <div class="fadeUp" id="kotae">
                         <br>
                         <p >「<div class="kakko"></div>」</p>
                     </div>
-                    <div class="enia">
-                        <p>※「エニアグラム」という科学的な根拠に基づいた性格診断となっています。</p>
-                    </div>
+                  </div>
+                  
+                  <div class="enia">
+                      <p>※「エニアグラム」という科学的な根拠に基づいた性格診断となっています。</p>
+                  </div>
                 </div>
+              </section>
+            <div class="form">
+              <!-- <p class="form-word">
+
+                POSSE②加入希望の方はこちら
+              </p> -->
+              <div class="yajirusi">
+
                 
+                <div class="arrow-bottom"><i class="fas fa-chevron-down"></i></div>
+              </div>
+              <a href="https://forms.gle/Shgnxfd8uA9P4kzx8" class="kanyuu">POSSE②加入希望の方はこちら</a>
+
             </div>
-        </section>
     <!-- </div>
 </section> -->
 
@@ -128,7 +147,7 @@
                 </li>
             <li><a href="/src/html/ayumi.html" class="introduce">Timeline</a></li>
             <li><a href="/src/html/products.html" class="introduce">Products</a></li>
-            <li><a href="/src/html/free.html" class="introduce">Free</a></li>
+            <li><a href="/src/html/free.html" class="introduce">Diagnose</a></li>
           </ul>
         </div>
         <!-- <div class="official">
