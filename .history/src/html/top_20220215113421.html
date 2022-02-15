@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トップページ</title>
+    <link rel="stylesheet" href="/src/reset.css">
+    <link rel="stylesheet" href="../css/top.css">
+    <script type="module" src="/src/js/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="#" ><img src="/src/image/10.png" alt="Travel Blog"></a>
+        </h1>
+        <ul>
+            <div class="lists">
+                <li><a href="" class="list hover_action">Home</a></li>
+                <li><a href="" class="list hover_action">Timeline</a></li>
+                <li><a href="" class="list hover_action">Products</a></li>
+                <li><a href="" class="list hover_action">Free</a></li>
+            </div>
+        </ul>
+    </header>
+
+<!-- クイズ -->
+<p class="btn record_register" id="openModal"><span>クイズ　POSSE2の特徴を掴もう！</span></p>
+<section id="modalArea" class="modalArea">
+    <div id="modalBg" class="modalBg"></div>
+    <div class="modalWrapper">
+        <!-- <div class="modalContents" id="modalContents"> -->
+
+<div class="quiz-wrapper">
+    <h2></h2>
+    <div class="quiz-container">
+        <div id="quiz-header">
+          <h2 id="question">Question text</h2>
+            <br>
+          <form id="quiz-form" name="quizForm">
+            <ul class="questions">
+              <li>
+                <input type="radio" id="a" name="answer" value="a" />
+                <label id="a-text" for="a">Question</label>
+              </li>
+              <li>
+                <input type="radio" id="b" name="answer" value="b" />
+                <label id="b-text"  for="b">Question</label>
+              </li>
+              <li>
+                <input type="radio" id="c" name="answer" value="c" />
+                <label id="c-text"  for="c">Question</label>
+              </li>
+              <li>
+                <input type="radio" id="d" name="answer" value="d" />
+                <label id="d-text"  for="d">Question</label>
+              </li>
+            </ul>  
+            
+          </form>
+        </div>
+
+        <button id="submit">回答する</button>
+
+        <!-- 結果表示用の要素 -->
+        <div id="results-container">
+          <div id="results-header">
+            <h2 id="results"></h2>
+            <div id="message">クイズお疲れ様！<br/>POSSE2の特徴を掴めたかな？<br/><br/></div>
+            <a href="https://docs.google.com/forms/d/1wqY5_Vh4aR_9MLO0ajiNwIj0maHaoNwLJg1XIkdqQ6k/viewform?edit_requested=true" id="message2">ご参加希望の方はこちらへ</a>
+            <button id="next_quiz">次の問題へ</button>
+          </div>
+        </div>
+      </div>
+</div>
+  
+<div id="closeModal" class="closeModal">
+    ×
+</div>
+<div class="loading" id="load"></div>
+<img id="done" class="done" src="/done.png" alt="">
+</div>
+</section>
+      <script src="../js/index.js"></script>
+</body>
+    </html>

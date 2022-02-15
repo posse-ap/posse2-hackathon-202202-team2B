@@ -1,6 +1,11 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 html {
   font-size: 6.25%;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 header {
@@ -26,8 +31,7 @@ header, footer a {
 header img {
   height: 80rem;
   width: 300rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 header ul {
@@ -79,6 +83,238 @@ header li {
   transform: scale(1, 1);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.quiz-wrapper {
+  background-color: #FF5757;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400rem;
+}
+
+.quiz-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10rem 2rem rgba(100, 100, 100, 0.1);
+  overflow: hidden;
+  width: 800rem;
+  max-width: 100%;
+}
+
+#quiz-header {
+  padding: 40rem;
+}
+
+.questions li {
+  margin: 10rem 0;
+}
+
+ul li input {
+  cursor: pointer;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+#question {
+  font-size: 20rem;
+}
+
+.questions {
+  font-size: 20rem;
+}
+
+button {
+  background-color: #304dec;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 20rem;
+  width: 100%;
+  padding: 13rem 13rem 13rem 40rem;
+}
+
+button:hover {
+  background-color: #233bc4;
+}
+
+#results-container {
+  display: none;
+  align-items: center;
+}
+
+#results-header {
+  text-align: center;
+  justify-content: center;
+}
+
+#results {
+  padding: 20rem 0;
+  font-size: 20rem;
+}
+
+#message {
+  display: none;
+  font-size: 20rem;
+  color: black;
+  background-color: white;
+}
+
+#message2 {
+  display: none;
+  font-size: 20rem;
+  font-weight: bold;
+  color: blue;
+  background-color: white;
+  margin: 20rem 200rem;
+  position: relative;
+  text-decoration: none;
+}
+
+#message2::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+#message2:hover::after {
+  transform: scale(1, 1);
+}
+
+/* モーダルCSS */
+#openModal {
+  font-size: 20rem;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0 10rem;
+  display: block;
+  width: 300px;
+  height: 70px;
+  margin: 40px auto 0;
+  color: #fff;
+  background: #FF5757;
+  box-shadow: 0 8px 15px 0 #000;
+  transition: 0.3s;
+  border-radius: 20rem;
+}
+
+#openModal:hover {
+  box-shadow: none;
+  transform: translate3d(0, 8px, 0);
+}
+
+.quiz_title {
+  display: flex;
+  flex-direction: column;
+  background-color: #FF5757;
+  padding: 30rem;
+  font-size: 30rem;
+  color: white;
+}
+
+.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  height: 4.2rem;
+  flex-direction: row;
+}
+
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalArea_loading {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.6);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 57rem;
+  max-width: 100%;
+  padding: 1rem 0rem;
+  background-color: #fff;
+  border-radius: 3rem;
+}
+
+.modalWrapper .first_container {
+  margin-top: 2.5rem;
+}
+
+.modalWrapper .second_container {
+  margin-top: 2.5rem;
+}
+
+.closeModal {
+  position: absolute;
+  top: 1rem;
+  right: 40rem;
+  cursor: pointer;
+  font-size: 100rem;
+  color: white;
+  border-radius: 50%;
+  width: 50rem;
+  height: 50rem;
+  align-items: center;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   header .lists {
     /* 横スクロールを表示 */
@@ -100,268 +336,39 @@ header li {
     display: block;
     padding: 0 16rem;
   }
-}
-.timeline {
-  width: 96%;
-  max-width: 600px;
-  margin: 130px auto;
-  position: relative;
-}
-.timeline-list {
-  padding: 40px 0;
-  padding-left: 80px;
-}
-.timeline-list-item {
-  display: flex;
-  line-height: 1.5;
-  font-size: 16px;
-}
-.timeline-list-item-1 {
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-}
-.timeline-list-item-1 .date {
-  width: 20%;
-  padding: 0 0 0 20px;
-  color: #888888;
-  font-weight: bold;
-  white-space: nowrap;
-}
-.timeline-list-item-1 .content {
-  position: relative;
-  width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
-  white-space: nowrap;
-}
-.timeline-list-item-1 .content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
-}
-.timeline-list-item-2 {
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-.timeline-list-item-2 .date {
-  width: 20%;
-  padding: 0 0 0 20px;
-  color: #888888;
-  font-weight: bold;
-  white-space: nowrap;
-}
-.timeline-list-item-2 .content {
-  position: relative;
-  width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
-  white-space: nowrap;
-}
-.timeline-list-item-2 .content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
-}
-.timeline-list-item-3 {
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.timeline-list-item-3 .date {
-  width: 20%;
-  padding: 0 0 0 20px;
-  color: #888888;
-  font-weight: bold;
-  white-space: nowrap;
-}
-.timeline-list-item-3 .content {
-  position: relative;
-  width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
-  white-space: nowrap;
-}
-.timeline-list-item-3 .content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
-}
-.timeline-list-item-4 {
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-}
-.timeline-list-item-4 .date {
-  width: 20%;
-  padding: 0 0 0 20px;
-  color: #888888;
-  font-weight: bold;
-  white-space: nowrap;
-}
-.timeline-list-item-4 .content {
-  position: relative;
-  width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
-  white-space: nowrap;
-}
-.timeline-list-item-4 .content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
-}
-.timeline-list-item-5 {
-  opacity: 0;
-  transition: opacity 1s;
-}
-.timeline-list-item-5 .date {
-  width: 20%;
-  padding: 0 0 0 20px;
-  color: #888888;
-  font-weight: bold;
-  white-space: nowrap;
-}
-.timeline-list-item-5 .content {
-  position: relative;
-  width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
-  white-space: nowrap;
-}
-.timeline-list-item-5 .content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
-}
-.timeline-list-item-6 {
-  opacity: 0;
-  transition: opacity 1s;
-}
-.timeline-list-item-6 .date {
-  width: 20%;
-  padding: 0 0 0 20px;
-  color: #888888;
-  font-weight: bold;
-  white-space: nowrap;
-}
-.timeline-list-item-6 .content {
-  position: relative;
-  width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
-  white-space: nowrap;
-}
-.timeline-list-item-6 .content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #000;
-  border-radius: 10px;
-}
-.timeline-list-item .view {
-  opacity: 1;
-}
 
-.fade {
-  margin-top: 80vh;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 3s;
-}
-
-.fade.view {
-  opacity: 1;
-}
-
-@-webkit-keyframes fadeInAnime {
-  from {
-    opacity: 0;
+  .quiz-wrapper {
+    height: 400rem;
   }
-  to {
-    opacity: 1;
+
+  .modalWrapper {
+    background-color: #FF5757;
+  }
+
+  .modalWrapper {
+    width: 100%;
+    height: 85%;
+    top: 55%;
+    padding: 0;
+  }
+
+  .quiz_title {
+    font-size: 25rem;
+  }
+
+  #message2 {
+    margin: 20rem;
+    text-decoration: block;
+  }
+
+  .closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 20rem;
+    cursor: pointer;
+    font-size: 50rem;
   }
 }
-
-@keyframes fadeInAnime {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.timeline img {
-  position: absolute;
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-.image-1 {
-  width: 370rem;
-  height: 220rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  top: 100rem;
-  left: -330rem;
-}
-
 footer {
   width: 100%;
   z-index: -1;
@@ -383,8 +390,7 @@ footer {
 .img2 {
   height: 80rem;
   width: 300rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 footer {
@@ -453,6 +459,9 @@ footer {
   width: 40px;
   height: 40px;
   margin: 0 25px;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-font-smoothing: antialiased;
 }
@@ -480,6 +489,9 @@ footer {
   background: #FF5757;
   visibility: hidden;
   opacity: 0;
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
