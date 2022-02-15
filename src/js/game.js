@@ -1,177 +1,232 @@
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
+window.onload = () => {
 
-canvas.width = 400;
-canvas.height = 400;
-
-canvas.setAttribute('style', 'display:block;margin:auto;background-color: #ddd');
-
-document.body.appendChild(canvas);
-
-
-
-//
-// ★ここからブロック崩しのプログラム★
-//
-
-const ball = {
-  x: null,
-  y: null,
-  width: 5,
-  height: 5,
-  speed: 4,
-  dx: null,
-  dy: null,
-  
-  update: function() {
-    ctx.fillRect(this.x, this.y, this.width, this.height);
-    ctx.fill();
-    
-    // ボールが壁に当たった時に跳ね返すための条件分岐
-    if(this.x < 0 || this.x > canvas.width) this.dx *= -1;
-    if(this.y < 0 || this.y > canvas.height) this.dy *= -1;
-    // ボールが地面に落ちた時にゲームを終了させる場合は
-    // if(this.y > canvas.height)　を条件式にプログラムする
-    
-    
-    this.x += this.dx;
-    this.y += this.dy;
-  }
-}
-
-const paddle = {
-  x: null,
-  y: null,
-  width: 100,
-  height: 15,
-  speed: 0,
-  
-  update: function() {
-    ctx.fillRect(this.x, this.y, this.width, this.height);
-    ctx.fill();
-    
-    this.x += this.speed;
-  }
-}
-
-const block = {
-  width: null,
-  height: 20,
-  data: [], // 全ブロックの位置情報を格納する
-  
-  update: function() {
-    this.data.forEach(brick => {
-      ctx.strokeRect(brick.x, brick.y, brick.width, brick.height);
-      ctx.stroke();
-    })
-  }
-}
-
-// ブロックの配置を配列で指定できるようにする
-// 0：非表示
-// 1：表示
-const level = [
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0],
-  [1,1,1,1,1,1],
-  [1,1,1,1,1,1],
-  [1,1,1,1,1,1],
-  [1,1,1,1,1,1],
-]
-
-function init()  {
-    loop();
-  paddle.x = canvas.width / 2 - paddle.width / 2;
-  paddle.y = canvas.height - paddle.height;
-  
-  ball.x = canvas.width / 2;
-  ball.y = canvas.height / 2 + 50;
-  ball.dx = ball.speed;
-  ball.dy = ball.speed;
-  
-  block.width = canvas.width / level[0].length;
-  
-  // 全ブロックの位置情報を設定する
-  for(let i=0; i<level.length; i++) {
-    for(let j=0; j<level[i].length; j++) {
-      if(level[i][j]) {
-        block.data.push({
-          x: block.width * j,
-          y: block.height * i,
-          width: block.width,
-          height: block.height
-        })
-      }
+    /**
+     * domの生成・位置取得
+     */
+    const setDomPosition = (dom, pos) => {
+        dom.style.left = `${pos.x}px`;
+        dom.style.top = `${pos.y}px`;
     }
-  }
-}
 
-// 当たり判定
-const collide = (obj1, obj2) => {
-  return obj1.x < obj2.x + obj2.width &&
-         obj2.x < obj1.x + obj1.width &&
-         obj1.y < obj2.y + obj2.height &&
-         obj2.y < obj1.y + obj1.height;
-}
-
-// メイン処理
-const loop = () => {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  
-  paddle.update();
-  ball.update();
-  block.update();
-  
-  // ボールとパドルの当たり判定
-  if(collide(ball, paddle)) {
-    ball.dy *= -1;
-    ball.y = paddle.y - ball.height; // パドルの端にボールが当たった時にめり込まないようにする
-  }
-  
-  // ボールとブロックの当たり判定
-  block.data.forEach((brick, index) => {
-    if(collide(ball, brick)) {
-      ball.dy *= -1;
-      block.data.splice(index, 1);
+    const getDomPosition = (dom) => {
+        const pos = {
+            x: parseFloat(dom.style.left),
+            y: parseFloat(dom.style.top)
+        };
+        return pos;
     }
-  })
-  
-  window.requestAnimationFrame(loop);
+
+    const createDom = (className) => {
+        const dom = document.createElement('div');
+        dom.classList.add(className);
+        return dom;
+    }
+
+    const addChildDom = (parentDom, childDom) => {
+        parentDom.append(childDom);
+    }
+
+    const removeChildDom = (parentDom, childDom) => {
+        parentDom.removeChild(childDom);
+    }
+
+    const changeDomTextContent = (dom, textContent) => {
+        dom.textContent = textContent;
+    }
+
+    /**
+     * 入力イベント
+     */
+    const leftButtonPress = () => {
+        barLeftSpeed = 5;
+    }
+
+    const leftButtonRelease = () => {
+        barLeftSpeed = 0;
+    }
+
+    const rightButtonPress = () => {
+        barRightSpeed = 5;
+    }
+
+    const rightButtonRelease = () => {
+        barRightSpeed = 0;
+    }
+
+    const displayRelease = () => {
+        if (gameMode === "startWait") {
+            changeDomTextContent(explainLabelDom, "break all blocks!");
+            gameMode = "gamePlaying";
+        }
+    }
+
+    /**
+     * メインループイベント
+     */
+    const mainLoop = () => {
+        switch (gameMode) {
+            case "gamePlaying":
+                {
+                    // バーの操作
+                    const barPos = getDomPosition(barDom);
+                    const barMovedPos = {
+                        x: barPos.x + barRightSpeed - barLeftSpeed,
+                        y: barPos.y
+                    };
+                    if (barMovedPos.x >= 0 && barMovedPos.x <= 340) {
+                        setDomPosition(barDom, barMovedPos);
+                    }
+
+                    // ボール移動
+                    const ballPos = getDomPosition(ballDom);
+                    let ballMovedPos = {
+                        x: ballPos.x + ballVec.x,
+                        y: ballPos.y + ballVec.y
+                    };
+                    if (ballMovedPos.x > 390) {
+                        ballMovedPos.x = 390;
+                        ballVec.x = -ballVec.x;
+                    }
+                    if (ballMovedPos.x < 0) {
+                        ballMovedPos.x = 0;
+                        ballVec.x = -ballVec.x;
+                    }
+                    if (ballMovedPos.y < 0) {
+                        ballMovedPos.y = 0;
+                        ballVec.y = -ballVec.y;
+                    }
+                    if (ballMovedPos.y > 510) {
+                        init(); // ボールが画面下にいってしまうとゲームオーバーなので初期化する
+                    } else {
+                        setDomPosition(ballDom, ballMovedPos);
+                    }
+
+                    // ブロックとの衝突処理
+                    for (const blockDom of blockDoms) {
+                        const blockPos = getDomPosition(blockDom);
+                        if (checkCollision({ x: blockPos.x, y: blockPos.y, width: 40, height: 20 }, { x: ballMovedPos.x, y: ballMovedPos.y, width: 10, height: 10 })) {
+                            removeChildDom(displayDom, blockDom);
+                            blockDoms = blockDoms.filter((dom => {
+                                return dom != blockDom;
+                            }));
+                            ballVec.y = -ballVec.y;
+                        }
+                    }
+
+                    // バーと球の衝突処理
+                    if (checkCollision({ x: barPos.x, y: barPos.y, width: 60, height: 20 }, { x: ballMovedPos.x, y: ballMovedPos.y, width: 10, height: 10 })) {
+                        ballMovedPos.y = barDom.y;
+                        ballVec.y = -ballVec.y;
+                    }
+
+                    // ブロックが全てなくなったか調べる
+                    if (blockDoms.length === 0) {
+                        gameMode = "clear";
+                        changeDomTextContent(explainLabelDom, "CLEAR!");
+                    }
+
+
+                    break;
+                }
+        }
+        window.requestAnimationFrame(mainLoop);
+    };
+    window.requestAnimationFrame(mainLoop);
+
+    /**
+     * ロジック部分
+     */
+
+    // 初期化関数
+    const init = () => {
+        // 状態の初期化
+        gameMode = "startWait";
+
+        changeDomTextContent(explainLabelDom, "click to start");
+
+        // 静的な定義DOMの座標定義
+        setDomPosition(barDom, { x: 175, y: 410 });
+        setDomPosition(leftButtonDom, { x: 50, y: 440 });
+        setDomPosition(rightButtonDom, { x: 250, y: 440 });
+        setDomPosition(ballDom, { x: 190, y: 300 });
+        setDomPosition(explainLabelDom, { x: 0, y: 350 });
+
+        // ボール向き定義
+        ballVec = { x: 3, y: -3 };
+
+
+        // 画面にブロックが残っていれば、全部削除してblockDomsを空にする
+        while (blockDoms.length > 0) {
+            removeChildDom(displayDom, blockDoms.pop());
+        }
+
+
+        //ブロック生成 (w:20px h:10px)
+        for (let xIndex = 0; xIndex < 5; xIndex++) {
+            for (let yIndex = 0; yIndex < 5; yIndex++) {
+                const blockDom = createDom("block");
+                setDomPosition(blockDom, { x: xIndex * 73, y: yIndex * 20 });
+                addChildDom(displayDom, blockDom);
+                blockDoms.push(blockDom);
+            }
+        }
+    }
+
+
+    const calcLength = (pos1, pos2) => {
+        return Math.sqrt((pos1.x - pos2.x) ** 2 + (pos1.y - pos2.y) ** 2);
+    }
+
+    const checkCollision = (rect1, rect2) => {
+        if ((rect1.x + rect1.width) >= rect2.x && rect1.x <= (rect2.x + rect2.width) && (rect1.y + rect1.height) >= rect2.y && rect1.y <= (rect2.y + rect2.height)) {
+            return true;
+        }
+        return false;
+    }
+
+
+
+    // 副作用を持つ状態変数の定義
+    let blockDoms = [];
+    let barLeftSpeed = 0;
+    let barRightSpeed = 0;
+    let ballVec = { x: 5, y: 5 };
+    let gameMode = "startWait"; // "startWait"|"gamePlaying"|"clear"
+
+
+
+    // 初期から存在するDOMの定義
+    const displayDom = document.getElementsByClassName("display")[0];
+    const barDom = document.getElementsByClassName("bar")[0];
+    const ballDom = document.getElementsByClassName("ball")[0];
+    const leftButtonDom = document.getElementsByClassName("left-button")[0];
+    const rightButtonDom = document.getElementsByClassName("right-button")[0];
+    const explainLabelDom = document.getElementsByClassName("explain-label")[0];
+
+
+    /**
+     * 入力系
+     */
+    // MEMO: ＰＣとスマホでタッチにベントが異なるので複数作成する 
+    //       実はPC・スマホ両方使えるpointerdown/pointerupというイベントがあるのだが、古いsafariがこれで動作しないので不採用
+    //       あと数年たったら死滅すると思われるのでpointer系のイベントが使えるようになるはず
+    // ＰＣ用
+    leftButtonDom.addEventListener("mousedown", leftButtonPress, false);
+    leftButtonDom.addEventListener("mouseup", leftButtonRelease, false);
+    leftButtonDom.addEventListener("mouseout", leftButtonRelease, false);
+    rightButtonDom.addEventListener("mousedown", rightButtonPress, false);
+    rightButtonDom.addEventListener("mouseup", rightButtonRelease, false);
+    rightButtonDom.addEventListener("mouseout", rightButtonRelease, false);
+    displayDom.addEventListener("mouseup", displayRelease, false);
+
+
+    // スマホ用
+    leftButtonDom.addEventListener("touchstart", leftButtonPress, false);
+    leftButtonDom.addEventListener("touchend", leftButtonRelease, false);
+    rightButtonDom.addEventListener("touchstart", rightButtonPress, false);
+    rightButtonDom.addEventListener("touchend", rightButtonRelease, false);
+    displayDom.addEventListener("touchend", displayRelease, false);
+
+
+    init();
 }
-
-
-
-
-
-document.addEventListener('keydown', e => {
-  if(e.key === 'ArrowLeft') paddle.speed = -6;
-  if(e.key === 'ArrowRight') paddle.speed = 6;
-});
-
-document.addEventListener('keyup', () => paddle.speed = 0);
-
-
-
-
-
-
-// スマホ対応
-// <![CDATA[
-paddle.addEventListener('dragend',dgend,false);
-paddle.addEventListener('touchstart',tcstart,false);
-paddle.addEventListener('touchend',tcend,false);
-function dgend(e){
-paddle.style.position='absolute';
-paddle.style.top=(e.pageY-50).toString()+'px';
-paddle.style.left=(e.pageX-50).toString()+'px';
-}
-function tcstart(e){
-e.preventDefault();
-}
-function tcend(e){
-e.preventDefault();
-paddle.style.position='absolute';
-paddle.style.top=(e.changedTouches[0].pageY-50).toString()+'px';
-paddle.style.left=(e.changedTouches[0].pageX-50).toString()+'px';
-}
-// ]]>
