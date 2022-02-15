@@ -1,190 +1,492 @@
-
 @use "../partial-sass/header";
 @use "../partial-sass/footer";
-html{
+html {
   font-size: 6.25%;
 }
+
+// ここから一番上のページ
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+  // text-align: center;
+  scroll-behavior: smooth;
+}
+
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  // text-align: center;
+  // margin-bottom: 300rem;
+}
+// ここまで
+
+.game {
+  position: absolute;
+  top: -70rem;
+  font-size: 50rem;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+}
+
+.game-2{
+  position: absolute;
+  top: 0rem;
+  font-size: 30rem;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+}
+
+.wrap {
+  animation: fadein 3s forwards;
+ }
+ 
+ @keyframes fadein {
+  0% {opacity: 0}
+  100% {opacity: 1}
+ }
+
+//ボタン
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  // font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  z-index: 50;
+  font-size: 40rem;
+  // font-weight: 700;
+  // line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 16rem 44rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  // letter-spacing: 1.6em;
+  color: #212529;
+  border-radius: 8rem;
+}
+
+a.btn--circle {
+  width: 400rem;
+  height: 180rem;
+  // padding: 20rem 0 0;
+  border-radius: 50%;
+  color: #fff;
+  background: rgb(13,59,117);
+  -webkit-box-shadow: 0 7rem 0 rgb(29,45,82);
+  box-shadow: 0 6rem 0 rgb(29,45,82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rem;
+}
+
+.game-button {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 500rem;
+  width: 100%;
+}
+
+.btn-1 {
+  position: absolute;
+  top: 0rem;
+  left: 150rem;
+}
+
+.btn-2 {
+  position: absolute;
+  top: 0rem;
+  right: 150rem;
+}
+
+a.btn--circle i {
+  font-size: 40rem;
+}
+
+.fa-position-bottom {
+  position: absolute;
+  bottom: 16rem;
+  left: calc(50% - 8rem);
+}
+
+a.btn--circle:hover {
+  -webkit-transform: translate(0, 4rem);
+  transform: translate(0, 4rem);
+  color: #fff;
+  -webkit-box-shadow: 0 3rem 0 #e53b4e;
+  box-shadow: 0 3rem 0 #e53b4e;
+}
+
+
+
+
+//ゲーム
 .display {
-    position: relative;
-    width: 100vw;
-    height: 500px;
-    border-radius: 10px;
-    background: #333;
-    border: 2px solid #cc7799;
+  position: relative;
+  width: 100vw;
+  height: 670rem;
+  border-radius: 10px;
+  background: #333;
+  border: 2px solid #cc7799;
 }
 
 .bar {
-    position: absolute;
-    width: 60px;
-    height: 20px;
-    background-color: #339999;
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background-color: #339999;
 }
 
 .block {
-    position: absolute;
-    box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    border: 2px solid #ffffff;
-    background: #339999;
+  position: absolute;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+  background: #339999;
 }
 
 .ball {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 30px;
-    background: #ff3333;
-    border: 2px solid #ffffff;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background: #ff3333;
+  border: 2px solid #ffffff;
 }
 
 .explain-label {
-    position: absolute;
-    text-align: center;
-    width: 400px;
-    font-size: 20px;
-    color: #ffffff;
-    pointer-events: none;
+  position: absolute;
+  text-align: center;
+  width: 400px;
+  font-size: 20px;
+  color: #ffffff;
+  pointer-events: none;
 }
 
 .left-button,
 .right-button {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffffff;
-    background: #99ff9980;
-    width: 100px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
-    border: 2px solid #ffffff;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #99ff9980;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
 }
 
-.marubatsu{
-    box-sizing: border-box;
-    font-size: 16px;
-    margin: 0;
-    line-height: normal;
-    *, *::before, *::after {
-        box-sizing: border-box;
-      }
-      h1 {
-        margin: 20px 0;
-        font-size: 2rem;
-        font-weight: bold;
-      }
-      .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 0 10px;
-        text-align: center;
-      }
-      .game-container {
-        padding: 60px 0;
-      }
-      .message-container {
-        margin-bottom: 20px;
-        font-size: 1.25rem;
-        font-weight: bold;
-      }
-      .batsu {
-        color: #00b0f0;
-      }
-      .maru {
-        color: #ff0000;
-      }
-      .js-hidden {
-        display: none;
-    
-      }
-      .hidden{
-        visibility: hidden;
-      }
-      .squares-container {
-        margin: 0 auto;
-        width: 202px;
-      }
-      .squares-box {
-        width: 202px;
-        height: 202px;
-        display: flex;
-        flex-wrap: wrap;
-        border: solid 2px #333;
-      }
-      .square {
-        position: relative;
-        width: calc(198px / 3);
-        height: calc(198px / 3);
-        border: solid 2px #333;
-      }
-      .js-maru-checked::before {
-        content: '';
-        width: 50px;
-        height: 50px;
-        border: solid 8px #ff0000;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      .js-batsu-checked::before {
-        content: '';
-        width: 50px;
-        height: 8px;
-        margin: auto;
-        background-color: #00b0f0;
-        border-radius: 4px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-      .js-batsu-checked::after {
-        content: '';
-        width: 8px;
-        height: 50px;
-        margin: auto;
-        background-color: #00b0f0;
-        border-radius: 4px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-      .btn-container {
-        padding-top: 40px;
-      }
-      .btn {
-        display: inline-block;
-       
-        width: fit-content;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .btn-reset {
-        color: #fff;
-        background-color: #ffc000;
-        font-weight: bold;
-      }
-      .btn-reset:hover {
-        background-color: #ffd347;
-        transition-duration: 0.4s;
-      }
-      
-      /* JS連動 */
-      .js-unclickable {
-        pointer-events: none;
-      }
-      .js-highLight {
-        background-color: #fff2cc;
-      }
 
+//まるばつ背景
+// body{
+//   background:#ec6a38;
+//   -webkit-animation:colour 10s linear infinite;
+//   -moz-animation:colour 10s linear infinite;
+  
+// }
+// @-webkit-keyframes colour{
+//   0%{
+//     background:#ec6a38
+//   }
+
+//   40%{
+//     background:#ec4038
+//   }
+
+//   80%{
+//     background:#ec9138
+//   }
+
+//   100%{
+//     background:#ec6a38
+//   }
+
+// }
+
+// @-moz-keyframes colour{
+//   0%{
+//     background:#ec6a38
+//   }
+
+//   40%{
+//     background:#ec4038
+//   }
+
+//   80%{
+//     background:#ec9138
+//   }
+
+//   100%{
+//     background:#ec6a38
+//   }
+
+// }
+// .marubatu h1{
+//   font-family:arial;
+//   margin-top:100px;
+//   color:#fff;
+//   font-size:50px;
+//   text-align:center;
+//   text-transform:uppercase;
+// }
+
+
+//ここまで
+.marubatsu {
+  height: 670rem;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  line-height: normal;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .game-container {
+    padding: 60px 0;
+  }
+  .message-container {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .batsu {
+    color: #00b0f0;
+  }
+  .maru {
+    color: #ff0000;
+  }
+  .js-hidden {
+    display: none;
+  }
+  .hidden {
+    visibility: hidden;
+  }
+  .squares-container {
+    margin: 0 auto;
+    width: 202px;
+  }
+  .squares-box {
+    width: 202px;
+    height: 202px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px #333;
+  }
+  .square {
+    position: relative;
+    width: calc(198px / 3);
+    height: calc(198px / 3);
+    border: solid 2px #333;
+  }
+  .js-maru-checked::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: solid 8px #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .js-batsu-checked::before {
+    content: "";
+    width: 50px;
+    height: 8px;
+    margin: auto;
+    background-color: #00b0f0;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .js-batsu-checked::after {
+    content: "";
+    width: 8px;
+    height: 50px;
+    margin: auto;
+    background-color: #00b0f0;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .btn-container {
+    padding-top: 40px;
+  }
+  .btn {
+    display: inline-block;
+
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-reset {
+    color: #fff;
+    background-color: #ffc000;
+    font-weight: bold;
+  }
+  .btn-reset:hover {
+    background-color: #ffd347;
+    transition-duration: 0.4s;
+  }
+
+  /* JS連動 */
+  .js-unclickable {
+    pointer-events: none;
+  }
+  .js-highLight {
+    background-color: #fff2cc;
+  }
+}
+//ここまで
+
+
+// レスポンシブ
+@media screen and (max-width: 1150px) {
+  a.btn--circle{
+    width: 300rem;
+    height: 150rem;
+    font-size: 30rem;
+  }
+  
+  a.btn--circle i{
+    font-size: 30rem;
+  }
+}
+
+@media screen and (max-width: 930px){
+  a.btn--circle{
+    width: 200rem;
+    height: 90rem;
+    font-size: 20rem;
+  }
+
+  a.btn--circle i{
+    font-size: 20rem;
+  }
+
+  a.btn{
+    padding: 12rem 20rem;
+  }
+}
+
+@media screen and (max-width: 750px){
+  a.btn--circle{
+    width: 150rem;
+    height: 70rem;
+    font-size: 15rem;
+  }
+
+  a.btn--circle i{
+    font-size: 15rem;
+  }
+
+  .btn-1{
+    left: 80rem;
+  }
+
+  .btn-2{
+    right: 80rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .btn-1{
+    left: 40rem;
+  }
+
+  .btn-2{
+    right: 40rem;
+  }
+
+  .game-2{
+    font-size: 20rem;
+  }
+
+  .game{
+    font-size: 35rem;
+  }
+}
+
+@media screen and (max-width: 430px){
+  .btn-1{
+    left: 20rem;
+  }
+
+  .btn-2{
+    right: 20rem;
+  }
+
+  .game-2{
+    font-size: 15rem;
+  }
+
+  .game{
+    font-size: 25rem;
+  }
 }

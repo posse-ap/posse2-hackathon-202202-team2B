@@ -405,3 +405,5 @@ wait.addEventListener('click',()=>{
         counter--;
     }
 })
+
+

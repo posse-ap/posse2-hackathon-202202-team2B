@@ -1,10 +1,11 @@
 @charset "UTF-8";
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
 header {
   height: 1.07rem;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 51;
 }
 
 header, footer a {
@@ -305,10 +306,153 @@ html {
   font-size: 6.25%;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.game {
+  position: absolute;
+  top: -70rem;
+  font-size: 50rem;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+}
+
+.game-2 {
+  position: absolute;
+  top: 0rem;
+  font-size: 30rem;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+}
+
+.wrap {
+  animation: fadein 3s forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn,
+a.btn,
+button.btn {
+  z-index: 50;
+  font-size: 40rem;
+  position: relative;
+  display: inline-block;
+  padding: 16rem 44rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #212529;
+  border-radius: 8rem;
+}
+
+a.btn--circle {
+  width: 400rem;
+  height: 180rem;
+  border-radius: 50%;
+  color: #fff;
+  background: #0d3b75;
+  -webkit-box-shadow: 0 7rem 0 #1d2d52;
+  box-shadow: 0 6rem 0 #1d2d52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rem;
+}
+
+.game-button {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 500rem;
+  width: 100%;
+}
+
+.btn-1 {
+  position: absolute;
+  top: 0rem;
+  left: 150rem;
+}
+
+.btn-2 {
+  position: absolute;
+  top: 0rem;
+  right: 150rem;
+}
+
+a.btn--circle i {
+  font-size: 40rem;
+}
+
+.fa-position-bottom {
+  position: absolute;
+  bottom: 16rem;
+  left: calc(50% - 8rem);
+}
+
+a.btn--circle:hover {
+  -webkit-transform: translate(0, 4rem);
+  transform: translate(0, 4rem);
+  color: #fff;
+  -webkit-box-shadow: 0 3rem 0 #e53b4e;
+  box-shadow: 0 3rem 0 #e53b4e;
+}
+
 .display {
   position: relative;
   width: 100vw;
-  height: 500px;
+  height: 670rem;
   border-radius: 10px;
   background: #333;
   border: 2px solid #cc7799;
@@ -368,13 +512,16 @@ html {
 }
 
 .marubatsu {
+  height: 670rem;
   box-sizing: border-box;
   font-size: 16px;
   margin: 0;
   line-height: normal;
   /* JS連動 */
 }
-.marubatsu *, .marubatsu *::before, .marubatsu *::after {
+.marubatsu *,
+.marubatsu *::before,
+.marubatsu *::after {
   box-sizing: border-box;
 }
 .marubatsu h1 {
@@ -484,6 +631,86 @@ html {
 }
 .marubatsu .js-highLight {
   background-color: #fff2cc;
+}
+
+@media screen and (max-width: 1150px) {
+  a.btn--circle {
+    width: 300rem;
+    height: 150rem;
+    font-size: 30rem;
+  }
+
+  a.btn--circle i {
+    font-size: 30rem;
+  }
+}
+@media screen and (max-width: 930px) {
+  a.btn--circle {
+    width: 200rem;
+    height: 90rem;
+    font-size: 20rem;
+  }
+
+  a.btn--circle i {
+    font-size: 20rem;
+  }
+
+  a.btn {
+    padding: 12rem 20rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  a.btn--circle {
+    width: 150rem;
+    height: 70rem;
+    font-size: 15rem;
+  }
+
+  a.btn--circle i {
+    font-size: 15rem;
+  }
+
+  .btn-1 {
+    left: 80rem;
+  }
+
+  .btn-2 {
+    right: 80rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btn-1 {
+    left: 40rem;
+  }
+
+  .btn-2 {
+    right: 40rem;
+  }
+
+  .game-2 {
+    font-size: 20rem;
+  }
+
+  .game {
+    font-size: 35rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .btn-1 {
+    left: 20rem;
+  }
+
+  .btn-2 {
+    right: 20rem;
+  }
+
+  .game-2 {
+    font-size: 15rem;
+  }
+
+  .game {
+    font-size: 25rem;
+  }
 }
 
 /*# sourceMappingURL=products.css.map */
