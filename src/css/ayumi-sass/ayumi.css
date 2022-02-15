@@ -230,7 +230,7 @@ footer {
   }
 
   .sns {
-    width: 800rem;
+    width: 400rem;
     text-align: center;
     margin: 0 auto;
   }
@@ -249,7 +249,7 @@ footer {
 
   .company {
     margin: 0 auto;
-    width: 800rem;
+    width: 400rem;
     text-align: center;
   }
 
@@ -259,6 +259,7 @@ footer {
 }
 @media screen and (max-width: 610px) {
   footer {
+    width: 100%;
     height: 100rem;
   }
 
@@ -267,6 +268,7 @@ footer {
   }
 
   .footer {
+    width: 100%;
     height: 100rem;
     align-items: flex-end;
   }
@@ -277,12 +279,13 @@ footer {
   }
 
   .company {
-    margin-bottom: 20rem;
-    margin-left: 20rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 200rem;
   }
 
   .sns {
-    width: 200rem;
+    width: 100%;
   }
 
   .sns a {
@@ -290,7 +293,7 @@ footer {
   }
 
   .footer-introduction li {
-    margin-right: 10rem;
+    margin: 0 5rem;
   }
 
   .sns a:hover span {
@@ -301,20 +304,38 @@ html {
   font-size: 6.25%;
 }
 
+.ayumi {
+  display: flex;
+  margin: 160rem auto 0rem auto;
+  width: 500rem;
+  text-align: center;
+  font-size: 40rem;
+  background-color: #FF5757;
+  border-radius: 50rem;
+  height: 80rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.title {
+  font-weight: bold;
+}
+
 .timeline {
   width: 96%;
-  max-width: 600px;
-  margin: 130px auto;
+  max-width: 600rem;
+  margin: 0 auto 130rem auto;
   position: relative;
 }
 .timeline-list {
-  padding: 40px 0;
-  padding-left: 80px;
+  padding: 40rem 0;
+  padding-left: 80rem;
 }
 .timeline-list-item {
   display: flex;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 16rem;
 }
 .timeline-list-item-1 {
   animation-name: fadeInAnime;
@@ -324,7 +345,7 @@ html {
 }
 .timeline-list-item-1 .date {
   width: 20%;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 20rem;
   color: #888888;
   font-weight: bold;
   white-space: nowrap;
@@ -332,19 +353,19 @@ html {
 .timeline-list-item-1 .content {
   position: relative;
   width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
+  padding: 0 20rem 60rem 30rem;
+  border-left: 1rem solid #aaaaaa;
   white-space: nowrap;
 }
 .timeline-list-item-1 .content::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
+  left: -10rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: #FF5757;
+  border-radius: 10rem;
 }
 .timeline-list-item-2 {
   animation-name: fadeInAnime;
@@ -355,7 +376,7 @@ html {
 }
 .timeline-list-item-2 .date {
   width: 20%;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 20rem;
   color: #888888;
   font-weight: bold;
   white-space: nowrap;
@@ -363,19 +384,19 @@ html {
 .timeline-list-item-2 .content {
   position: relative;
   width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
+  padding: 0 20rem 60rem 30rem;
+  border-left: 1rem solid #aaaaaa;
   white-space: nowrap;
 }
 .timeline-list-item-2 .content::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
+  left: -10rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: #FF5757;
+  border-radius: 10rem;
 }
 .timeline-list-item-3 {
   animation-name: fadeInAnime;
@@ -386,7 +407,7 @@ html {
 }
 .timeline-list-item-3 .date {
   width: 20%;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 20rem;
   color: #888888;
   font-weight: bold;
   white-space: nowrap;
@@ -394,19 +415,19 @@ html {
 .timeline-list-item-3 .content {
   position: relative;
   width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
+  padding: 0 20rem 60rem 30rem;
+  border-left: 1rem solid #aaaaaa;
   white-space: nowrap;
 }
 .timeline-list-item-3 .content::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
+  left: -10rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: #FF5757;
+  border-radius: 10rem;
 }
 .timeline-list-item-4 {
   animation-name: fadeInAnime;
@@ -417,7 +438,7 @@ html {
 }
 .timeline-list-item-4 .date {
   width: 20%;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 20rem;
   color: #888888;
   font-weight: bold;
   white-space: nowrap;
@@ -425,19 +446,19 @@ html {
 .timeline-list-item-4 .content {
   position: relative;
   width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
+  padding: 0 20rem 60rem 30rem;
+  border-left: 1rem solid #aaaaaa;
   white-space: nowrap;
 }
 .timeline-list-item-4 .content::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
+  left: -10rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: #FF5757;
+  border-radius: 10rem;
 }
 .timeline-list-item-5 {
   opacity: 0;
@@ -445,7 +466,7 @@ html {
 }
 .timeline-list-item-5 .date {
   width: 20%;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 20rem;
   color: #888888;
   font-weight: bold;
   white-space: nowrap;
@@ -453,7 +474,7 @@ html {
 .timeline-list-item-5 .content {
   position: relative;
   width: 80%;
-  padding: 0 20px 60px 30px;
+  padding: 0 20rem 60rem 30rem;
   border-left: 1px solid #aaaaaa;
   white-space: nowrap;
 }
@@ -461,11 +482,11 @@ html {
   content: "";
   position: absolute;
   top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #00c2bc;
-  border-radius: 10px;
+  left: -10rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: #FF5757;
+  border-radius: 10rem;
 }
 .timeline-list-item-6 {
   opacity: 0;
@@ -473,7 +494,7 @@ html {
 }
 .timeline-list-item-6 .date {
   width: 20%;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 20rem;
   color: #888888;
   font-weight: bold;
   white-space: nowrap;
@@ -481,19 +502,47 @@ html {
 .timeline-list-item-6 .content {
   position: relative;
   width: 80%;
-  padding: 0 20px 60px 30px;
-  border-left: 1px solid #aaaaaa;
+  padding: 0 20rem 60rem 30rem;
+  border-left: 1rem solid #aaaaaa;
   white-space: nowrap;
 }
 .timeline-list-item-6 .content::before {
   content: "";
   position: absolute;
+  top: -5rem;
+  left: -15rem;
+  width: 30rem;
+  height: 30rem;
+  background-color: red;
+  border-radius: 15rem;
+}
+.timeline-list-item-7 {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.timeline-list-item-7 .date {
+  width: 20%;
+  padding: 0 0 0 20rem;
+  color: #888888;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.timeline-list-item-7 .content {
+  position: relative;
+  width: 80%;
+  padding: 0 20rem 60rem 30rem;
+  border-left: 1rem solid #aaaaaa;
+  white-space: nowrap;
+}
+.timeline-list-item-7 .content::before {
+  content: "";
+  position: absolute;
   top: 0;
-  left: -10px;
-  width: 20px;
-  height: 20px;
+  left: -10rem;
+  width: 20rem;
+  height: 20rem;
   background-color: #000;
-  border-radius: 10px;
+  border-radius: 10rem;
 }
 .timeline-list-item .view {
   opacity: 1;
@@ -518,6 +567,25 @@ html {
     opacity: 1;
   }
 }
+a.btn--red {
+  background-color: #FF5757;
+  margin-top: 8rem;
+}
+
+a.btn-c:hover {
+  background-color: orange;
+}
+
+a.btn-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 6rem 12rem 12rem 6rem;
+  color: #fff;
+  border-radius: 100vh;
+}
+
 .timeline img {
   position: absolute;
   animation-name: fadeInAnime;
@@ -528,45 +596,225 @@ html {
 
 .image-1 {
   width: 370rem;
-  height: 220rem;
+  height: 250rem;
   object-fit: cover;
-  top: 50rem;
-  left: -330rem;
+  top: 0rem;
+  left: -410rem;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
 }
 
 .image-2 {
   width: 300rem;
-  height: 320rem;
+  height: 350rem;
   object-fit: cover;
-  top: 200rem;
-  left: 600rem;
+  top: 0rem;
+  left: 550rem;
   animation-delay: 0.3s;
+  border-radius: 60% 60% 70% 50%/70% 50% 30% 40%;
 }
 
 .image-3 {
-  width: 370rem;
-  height: 220rem;
+  width: 350rem;
+  height: 270rem;
   object-fit: cover;
-  top: 400rem;
-  left: -330rem;
+  top: 30rem;
+  left: -410rem;
   animation-delay: 0.6s;
+  border-radius: 30% 70% 60% 40%/30% 40% 60% 40%;
 }
 
 .image-4 {
   width: 370rem;
-  height: 220rem;
+  height: 250rem;
   object-fit: cover;
-  top: 600rem;
-  left: 600rem;
+  top: 50rem;
+  left: 550rem;
   animation-delay: 0.9s;
+  border-radius: 40% 60% 60% 40%/50% 40% 60% 50%;
 }
 
 .image-5 {
   width: 370rem;
-  height: 220rem;
+  height: 250rem;
   object-fit: cover;
-  top: 800rem;
-  left: -330rem;
+  top: 70rem;
+  left: -410rem;
+  border-radius: 70% 30% 30% 70%/70% 70% 30% 30%;
+}
+
+.image-6 {
+  width: 350rem;
+  height: 250rem;
+  object-fit: cover;
+  top: 50rem;
+  left: 550rem;
+  animation-delay: 0.9s;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+}
+
+@media screen and (max-width: 1350px) {
+  .timeline {
+    margin: 130rem auto;
+  }
+
+  .timeline-list {
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .image-1 {
+    width: 250rem;
+    height: 170rem;
+    top: 0rem;
+    left: 500rem;
+  }
+
+  .image-2 {
+    width: 230rem;
+    height: 250rem;
+    top: 0rem;
+    left: 600rem;
+  }
+
+  .image-3 {
+    width: 250rem;
+    height: 170rem;
+    top: 50rem;
+    left: 500rem;
+  }
+
+  .image-4 {
+    width: 250rem;
+    height: 170rem;
+    top: 50rem;
+    left: 580rem;
+  }
+
+  .image-5 {
+    width: 300rem;
+    height: 250rem;
+    top: 60rem;
+    left: 500rem;
+  }
+
+  .image-6 {
+    width: 250rem;
+    height: 170rem;
+    top: 90rem;
+    left: 580rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .timeline {
+    margin: 0rem auto 130rem auto;
+  }
+
+  .timeline-list {
+    margin: auto;
+    padding-left: 20rem;
+  }
+
+  .image-1 {
+    width: 300rem;
+    height: 200rem;
+  }
+
+  .image-2 {
+    width: 250rem;
+    height: 260rem;
+  }
+
+  .image-3 {
+    width: 300rem;
+    height: 200rem;
+  }
+
+  .image-4 {
+    width: 300rem;
+    height: 200rem;
+  }
+
+  .image-5 {
+    width: 300rem;
+    height: 250rem;
+  }
+
+  .image-6 {
+    width: 290rem;
+    height: 200rem;
+  }
+
+  .timeline img {
+    position: initial;
+    margin-top: 20rem;
+    margin-left: 30rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .timeline {
+    margin: 0;
+    margin-left: 10rem;
+  }
+
+  .timeline-list {
+    margin: 0;
+    padding-left: 0rem;
+    max-width: 300rem;
+  }
+
+  .timeline-list-item {
+    font-size: 10rem;
+  }
+
+  .image-1 {
+    width: 250rem;
+    height: 180rem;
+  }
+
+  .image-2 {
+    width: 250rem;
+    height: 260rem;
+  }
+
+  .image-3 {
+    width: 250rem;
+    height: 180rem;
+  }
+
+  .image-4 {
+    width: 250rem;
+    height: 180rem;
+  }
+
+  .image-5 {
+    width: 250rem;
+    height: 180rem;
+  }
+
+  .image-6 {
+    width: 250rem;
+    height: 170rem;
+  }
+
+  .timeline img {
+    position: initial;
+    margin-top: 20rem;
+    margin-left: 30rem;
+  }
+
+  .ayumi {
+    display: flex;
+    margin: 160rem auto 0rem auto;
+    width: 300rem;
+    text-align: center;
+    font-size: 20rem;
+    background-color: #FF5757;
+    border-radius: 30rem;
+    height: 50rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=ayumi.css.map */

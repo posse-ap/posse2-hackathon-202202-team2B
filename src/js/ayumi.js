@@ -19,6 +19,15 @@ $(function () {
       }
     });
 
+    $('.timeline-list-item-7').each(function () {
+      const targetElement = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight) {
+        $(this).addClass('view');
+      }
+    });
+
     $('.image-1').each(function () {
       const targetElement = $(this).offset().top;
       const scroll = $(window).scrollTop();

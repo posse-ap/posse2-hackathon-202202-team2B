@@ -1,0 +1,88 @@
+.main {
+    position: relative;
+  }
+  .pager {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0;
+    li {
+      display: block;
+      margin: 20px;
+      a {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 50%;
+      }
+    }
+    .is-current {
+      a {
+        background: #232323;
+      }
+    }
+  }
+  .image-container{
+width: 100vw;
+height: 100vh;
+justify-content: center;
+
+
+  }
+  
+  
+  
+  // ===========================
+  // section
+  // ------------------------------
+  .section {
+    transition: opacity .5s ease .75s;
+      opacity: 0;
+    width: 100%;
+    &.is-show {
+        opacity: 1;
+      
+    }
+  }
+  .section-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    text-align: center;
+    opacity: 0;
+    width: 100vw;
+    transition: opacity .5s ease .75s;
+  }
+  
+  h2 {
+    color: #232323;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  h3 {
+    color: #232323;
+  }
+  
+  p {
+    color: #232323;
+  }
+  
+  .section-red {
+   background-image: url("../../image/LINE_ALBUM_220215.jpg");
+   background-position: center;
+
+  }
+  
+  .section-blue {
+    background-image: url("../../image/hackathon.jpg");
+    background-position: center;
+  }
+  
+  .section-green {
+    background-image: url("../../image/rookie_hackathon.jpg");
+    background-position: center;
+  }

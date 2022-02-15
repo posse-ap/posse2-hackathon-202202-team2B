@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   height: 1.07rem;
   position: fixed;
@@ -230,7 +231,7 @@ footer {
   }
 
   .sns {
-    width: 800rem;
+    width: 400rem;
     text-align: center;
     margin: 0 auto;
   }
@@ -249,7 +250,7 @@ footer {
 
   .company {
     margin: 0 auto;
-    width: 800rem;
+    width: 400rem;
     text-align: center;
   }
 
@@ -259,6 +260,7 @@ footer {
 }
 @media screen and (max-width: 610px) {
   footer {
+    width: 100%;
     height: 100rem;
   }
 
@@ -267,6 +269,7 @@ footer {
   }
 
   .footer {
+    width: 100%;
     height: 100rem;
     align-items: flex-end;
   }
@@ -277,12 +280,13 @@ footer {
   }
 
   .company {
-    margin-bottom: 20rem;
-    margin-left: 20rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 200rem;
   }
 
   .sns {
-    width: 200rem;
+    width: 100%;
   }
 
   .sns a {
@@ -290,7 +294,7 @@ footer {
   }
 
   .footer-introduction li {
-    margin-right: 10rem;
+    margin: 0 5rem;
   }
 
   .sns a:hover span {
@@ -299,6 +303,187 @@ footer {
 }
 html {
   font-size: 6.25%;
+}
+
+.display {
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  border-radius: 10px;
+  background: #333;
+  border: 2px solid #cc7799;
+}
+
+.bar {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background-color: #339999;
+}
+
+.block {
+  position: absolute;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+  background: #339999;
+}
+
+.ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background: #ff3333;
+  border: 2px solid #ffffff;
+}
+
+.explain-label {
+  position: absolute;
+  text-align: center;
+  width: 400px;
+  font-size: 20px;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.left-button,
+.right-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #99ff9980;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+}
+
+.marubatsu {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  line-height: normal;
+  /* JS連動 */
+}
+.marubatsu *, .marubatsu *::before, .marubatsu *::after {
+  box-sizing: border-box;
+}
+.marubatsu h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.marubatsu .wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+.marubatsu .game-container {
+  padding: 60px 0;
+}
+.marubatsu .message-container {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.marubatsu .batsu {
+  color: #00b0f0;
+}
+.marubatsu .maru {
+  color: #ff0000;
+}
+.marubatsu .js-hidden {
+  display: none;
+}
+.marubatsu .hidden {
+  visibility: hidden;
+}
+.marubatsu .squares-container {
+  margin: 0 auto;
+  width: 202px;
+}
+.marubatsu .squares-box {
+  width: 202px;
+  height: 202px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 2px #333;
+}
+.marubatsu .square {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  border: solid 2px #333;
+}
+.marubatsu .js-maru-checked::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: solid 8px #ff0000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.marubatsu .js-batsu-checked::before {
+  content: "";
+  width: 50px;
+  height: 8px;
+  margin: auto;
+  background-color: #00b0f0;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.marubatsu .js-batsu-checked::after {
+  content: "";
+  width: 8px;
+  height: 50px;
+  margin: auto;
+  background-color: #00b0f0;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.marubatsu .btn-container {
+  padding-top: 40px;
+}
+.marubatsu .btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.marubatsu .btn-reset {
+  color: #fff;
+  background-color: #ffc000;
+  font-weight: bold;
+}
+.marubatsu .btn-reset:hover {
+  background-color: #ffd347;
+  transition-duration: 0.4s;
+}
+.marubatsu .js-unclickable {
+  pointer-events: none;
+}
+.marubatsu .js-highLight {
+  background-color: #fff2cc;
 }
 
 /*# sourceMappingURL=products.css.map */
