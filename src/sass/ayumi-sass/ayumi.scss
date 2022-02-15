@@ -1,8 +1,10 @@
 @use "../partial-sass/header";
 @use "../partial-sass/footer";
+
 html{
   font-size: 6.25%;
 }
+
 // ここからタイムライン
 .timeline {
     width: 96%;
@@ -19,6 +21,7 @@ html{
             display: flex;
             line-height: 1.5;
             font-size: 16px;
+
 
         &-1{
             animation-name:fadeInAnime;
@@ -299,4 +302,15 @@ opacity:0;
   object-fit: cover;
   top: 800rem;
   left: -330rem;
+}
+
+
+@media screen and (max-width: 1350px) {
+  .timeline {
+    margin: 0;
+  }
+
+  .timeline-list{
+    margin: 0;
+  }
 }
