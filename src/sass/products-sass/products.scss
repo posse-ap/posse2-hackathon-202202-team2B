@@ -1,9 +1,5 @@
-// canvas{
-
-//     display: block;
-//     margin: auto;
-//     background-color: #ddd;
-//     width: 400px;
-//     height: 400px;
-
-// }
+@use "../partial-sass/header";
+@use "../partial-sass/footer";
+html{
+  font-size: 6.25%;
+}

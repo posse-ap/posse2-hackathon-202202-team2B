@@ -1,3 +1,8 @@
+@use "../partial-sass/header";
+@use "../partial-sass/footer";
+html{
+  font-size: 6.25%;
+}
 // ここからタイムライン
 .timeline {
     width: 96%;
@@ -257,6 +262,41 @@ opacity:0;
       width: 370rem;
       height: 220rem;
       object-fit: cover;
-      top: 100rem;
+      top: 50rem;
       left: -330rem;
   }
+
+  .image-2{
+    width: 300rem;
+    height: 320rem;
+    object-fit: cover;
+    top: 200rem;
+    left: 600rem;
+    animation-delay: 0.3s;
+}
+
+.image-3{
+  width: 370rem;
+  height: 220rem;
+  object-fit: cover;
+  top: 400rem;
+  left: -330rem;
+  animation-delay: 0.6s;
+}
+
+.image-4{
+  width: 370rem;
+  height: 220rem;
+  object-fit: cover;
+  top: 600rem;
+  left: 600rem;
+  animation-delay: 0.9s;
+}
+
+.image-5{
+  width: 370rem;
+  height: 220rem;
+  object-fit: cover;
+  top: 800rem;
+  left: -330rem;
+}
