@@ -1,6 +1,74 @@
 'use strict';
+
+ //ここからタイムライン
+ $(function () {
+  $(window).scroll(function () {
+    $('.timeline-list-item-5').each(function () {
+      const targetElement = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight) {
+        $(this).addClass('view');
+      }
+    });
+
+    $('.timeline-list-item-6').each(function () {
+      const targetElement = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight) {
+        $(this).addClass('view');
+      }
+    });
+
+    $('.image-1').each(function () {
+      const targetElement = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight) {
+        $(this).addClass('view');
+      }
+    });
+  });
+});
+
 // クイズデータを読み込む
-import { quizDataJp } from './quiz_data_jp.js';
+// import { quizDataJp } from './quiz_data_jp.js';
+
+const quizDataJp = [
+  {
+    question: '問1/4　一人ひとりに目が行き届きやすく、◯◯◯の向上を支援しやすい',
+    a: '大学のGPA',
+    b: '健康',
+    c: 'プログラミングスキル',
+    d: '睡眠',
+    correct: 'c'
+  },
+  {
+    question: '問2/4　一人ひとりの◯◯◯を手厚くサポートしやすい',
+    a: '健康',
+    b: '交通費',
+    c: '大学の課題',
+    d: '悩み',
+    correct: 'd'
+  },
+  {
+    question: '問3/4　一人ひとりの◯◯◯がコミュニティ内で認識されやすい',
+    a: '家族',
+    b: '個性/存在',
+    c: '黒歴史',
+    d: 'バイト代',
+    correct: 'b'
+  },
+  {
+    question: '問4/4　◯◯◯人間関係を構築しやすい。一生の友達',
+    a: '深い',
+    b: '浅い',
+    c: 'よっ友的な',
+    d: '軽い',
+    correct: 'a'
+  },
+];
 
 // 問題文
 const questionElm = document.getElementById('question');
@@ -28,7 +96,7 @@ const quizHeaderElm = document.getElementById('quiz-header');
 const resultsConElm = document.getElementById('results-container');
 const resultsElm = document.getElementById('results');
 
-loadQuiz();
+
 
 // 問題を読み込む
 function loadQuiz() {
@@ -44,6 +112,8 @@ function loadQuiz() {
   c_text.innerText = currentQuizData.c;
   d_text.innerText = currentQuizData.d;
 }
+
+loadQuiz();
 
 // 回答を取得
 function getAnswered() {
@@ -137,33 +207,5 @@ window.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-$(function () {
-  $(window).scroll(function () {
-    $('.timeline-list-item-5').each(function () {
-      const targetElement = $(this).offset().top;
-      const scroll = $(window).scrollTop();
-      const windowHeight = $(window).height();
-      if (scroll > targetElement - windowHeight) {
-        $(this).addClass('view');
-      }
-    });
 
-    $('.timeline-list-item-6').each(function () {
-      const targetElement = $(this).offset().top;
-      const scroll = $(window).scrollTop();
-      const windowHeight = $(window).height();
-      if (scroll > targetElement - windowHeight) {
-        $(this).addClass('view');
-      }
-    });
-
-    $('.image-1').each(function () {
-      const targetElement = $(this).offset().top;
-      const scroll = $(window).scrollTop();
-      const windowHeight = $(window).height();
-      if (scroll > targetElement - windowHeight) {
-        $(this).addClass('view');
-      }
-    });
-  });
-});
+ 
