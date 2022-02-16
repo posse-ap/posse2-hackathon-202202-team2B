@@ -5,7 +5,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 51;
 }
 
 header, footer a {
@@ -23,7 +23,8 @@ header, footer a {
 header img {
   height: 80rem;
   width: 300rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 header ul {
@@ -75,6 +76,28 @@ header li {
   transform: scale(1, 1);
 }
 
+@media (max-width: 600px) {
+  header .lists {
+    /* 横スクロールを表示 */
+    overflow-x: scroll;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  header li {
+    margin: 0rem;
+    padding: 10rem 60rem 10rem 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  header ul {
+    display: block;
+    padding: 0 16rem;
+  }
+}
 footer {
   width: 100%;
   z-index: -1;
@@ -96,7 +119,8 @@ footer {
 .img2 {
   height: 80rem;
   width: 300rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {
@@ -165,9 +189,6 @@ footer {
   width: 40px;
   height: 40px;
   margin: 0 25px;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-font-smoothing: antialiased;
 }
@@ -195,9 +216,6 @@ footer {
   background: #FF5757;
   visibility: hidden;
   opacity: 0;
-  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -232,7 +250,7 @@ footer {
   }
 
   .sns {
-    width: 800rem;
+    width: 400rem;
     text-align: center;
     margin: 0 auto;
   }
@@ -251,7 +269,7 @@ footer {
 
   .company {
     margin: 0 auto;
-    width: 800rem;
+    width: 400rem;
     text-align: center;
   }
 
@@ -261,6 +279,7 @@ footer {
 }
 @media screen and (max-width: 610px) {
   footer {
+    width: 100%;
     height: 100rem;
   }
 
@@ -269,22 +288,24 @@ footer {
   }
 
   .footer {
+    width: 100%;
     height: 100rem;
     align-items: flex-end;
   }
 
-  .footer-introduction {
+  ul .footer-introduction {
     margin-bottom: 20rem;
-    margin-right: 20rem;
+    margin: 20rem;
   }
 
   .company {
-    margin-bottom: 20rem;
-    margin-left: 20rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 200rem;
   }
 
   .sns {
-    width: 200rem;
+    width: 100%;
   }
 
   .sns a {
@@ -292,7 +313,7 @@ footer {
   }
 
   .footer-introduction li {
-    margin-right: 10rem;
+    margin: 0 5rem;
   }
 
   .sns a:hover span {
@@ -307,6 +328,134 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  margin-right: 5%;
+  background: radial-gradient(#FFFFFF, #FF5757);
+  z-index: 100;
+}
+
+#loader {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 40px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  z-index: 100;
+}
+
+.image-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 700px) {
+  #loader-bg #loader .original-gredient .logo-test .image-1 {
+    width: 250rem;
+  }
+}
+.topbtn {
+  margin-left: 85%;
+  width: 200rem;
+  height: 80rem;
+  border-color: #FF5757;
+  border-width: 2rem;
+  border-radius: 20rem;
+  background-color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 4rem;
+  z-index: 1;
+  /* 全体を囲うコンテナー＆背景 */
+}
+.topbtn .container {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  min-height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.topbtn .container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(252, 87, 88, 0);
+}
+.topbtn .container .countdown {
+  position: relative;
+  color: #2f231b;
+  text-align: center;
+}
+.topbtn .container .countdown .countdown-title {
+  font-family: "MS Pゴシック", sans-serif;
+  color: #2f231b;
+  font-size: 13rem;
+  line-height: 1.2;
+}
+.topbtn .container .countdown .countdown-title .ceremony-time {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.04rem;
+  font-weight: bold;
+  letter-spacing: 0.005em;
+}
+.topbtn .container .countdown .time-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+}
+.topbtn .container .countdown .time-container .time {
+  font-family: "Share Tech Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+  font-size: 2px;
+}
+.topbtn .container .countdown .time-container .time .time-num {
+  font-size: 20px;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .topbtn {
+    width: 100rem;
+    height: 80rem;
+  }
+  .topbtn .container .countdown .countdown-title {
+    font-size: 6rem;
+  }
+  .topbtn .container .countdown .time-container {
+    flex-wrap: wrap;
+  }
+  .topbtn .container .countdown .time-container .time {
+    font-size: 4rem;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -464,7 +613,6 @@ button.btn {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   text-align: center;
   vertical-align: middle;
@@ -540,27 +688,6 @@ button.btn {
 }
 
 @media (max-width: 600px) {
-  header .lists {
-    /* 横スクロールを表示 */
-    overflow-x: scroll;
-    margin: 0;
-    white-space: nowrap;
-  }
-
-  header li {
-    margin: 0rem;
-    padding: 10rem 60rem 10rem 0;
-  }
-
-  .logo {
-    margin: 0;
-  }
-
-  header ul {
-    display: block;
-    padding: 0 16rem;
-  }
-
   .quiz-wrapper {
     height: 400rem;
   }
@@ -582,7 +709,8 @@ button.btn {
 
   #message2 {
     margin: 20rem;
-    text-decoration: block;
+    -webkit-text-decoration: block;
+            text-decoration: block;
   }
 
   .closeModal {

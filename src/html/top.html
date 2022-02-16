@@ -5,16 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>トップページ</title>
-    <link rel="stylesheet" href="/src/reset.css">
+    <link rel="stylesheet" href="/src/reset.css" />
     <link rel="stylesheet" href="../css/top-sass/top.css">
-    <!-- <script type="module" src="/src/js/index.js" defer></script> -->
-    
+    <link rel="stylesheet" href="/src/css/countdown.css">
 </head>
 <body>
-    <header>
+    
+<!-- ローディング -->
+
+<div id="loader-bg">
+  <div id="loader">
+    <div class="original-gredient">
+      <div class="logo-test">
+        <img class="image-1" src="/src/image/スクリーンショット_2022-02-16_4.26.24-removebg-preview.png"  alt="POSSE②ロゴ">
+      </div>
+    </div>
+  </div>
+</div>>
+
+<!-- ローディング ここまで-->
+
+<div id="wrap">
+<header>
       <h1 class="logo">
-        <a href="#"><img src="/src/image/10.png" alt="Travel Blog" /></a>
+        <a href="#"alt="posse-logo"><img src="/src/image/10.png" alt="logo-picture" /></a>
       </h1>
+       <!-- カウントダウン -->
+      <div class="topbtn">
+        <div class="container">
+          <div class="countdown">
+            <h1 class="countdown-title">入学式まであと!</h1>
+            <div class="time-container">
+              <p class="time"><span id="days" class="time-num"></span>days</p>
+              <p class="time"><span id="hours" class="time-num"></span>hours</p>
+              <p class="time"><span id="minutes" class="time-num"></span>minutes</p>
+              <p class="time"><span id="seconds" class="time-num"></span>seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <ul>
         <div class="lists">
           <li><a href="/src/html/top.html" class="list hover_action">Home</a></li>
@@ -24,9 +53,10 @@
         </div>
       </ul>
     </header>
-<!-- ヘッダーのしたに隠れてしまうため、brで改行 -->
-<br><br><br><br><br><br><br><br><br><br><br>
 
+<!-- ヘッダーのしたに隠れてしまうため、brで改行 -->
+
+<br><br><br><br><br><br><br><br><br><br><br>
 
 <!-- クイズ -->
 <button class="btn record_register " id="openModal"><span>〜クイズ〜 <br/>　POSSE2の特徴を掴もう！</span></button>
@@ -107,7 +137,11 @@
       </div>
       
     </footer>
+  </div>
+<script src="/src/js/countdown.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="../js/main.js"></script>
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/src/js/loading.js"></script>
 </html>
+
