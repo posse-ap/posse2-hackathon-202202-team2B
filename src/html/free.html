@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/reset.css">
     <link rel="stylesheet" href="/src/css/free-sass/free.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script> -->
 </head>
 <body>
     <header>
@@ -64,8 +63,8 @@
                 <form name="form1" id="Q">
                     <p>以下の問いに答え、診断してみよう！</p>
                     <br>
-                    <p>設問1　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。
-                    <br>
+                    <p class="p_question">設問1　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。</p>
+                    
                     <br>
                     <input name="q1" type="radio" value="1"> 様子見をして、自ら積極的に近づくことは少なく、どちらかというと引っ込み思案の方だ。
                     <br>
@@ -74,11 +73,10 @@
                     <br>
                     <br>
                     <input name="q1" type="radio" value="3"> チームワークを重視し、いつの間にか頼まれて、まとめ役をすることがある。
-                    </p>
+                    
                     <br>
                     <br>
-                    <p>設問2　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。         
-                    <br>
+                    <p class="p_question">設問2　以下の3つの文章の中から、自分に最もふさわしい内容を選択してください。</p>     
                     <br>
                     <input name="q2" type="radio" value="13"> 競う気持ちが旺盛で良い評価を得るために効率を旨に活動する主役。
                     <br>
@@ -87,7 +85,7 @@
                     <br>
                     <br>
                     <input name="q2" type="radio" value="23"> 楽しいこと興味あることに次々と飛びつき熱中するノリのよい楽天家。
-                    </p>
+                    
                 </form>
                 
                 <button id="openModal" onclick="answer();">診断！</button>

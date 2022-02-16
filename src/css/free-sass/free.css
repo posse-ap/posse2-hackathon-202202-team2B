@@ -483,6 +483,10 @@ html {
     opacity: 0;
   }
 }
+.p_question {
+  font-weight: bold;
+}
+
 .reLoad {
   font-size: 15rem;
   border: 0;

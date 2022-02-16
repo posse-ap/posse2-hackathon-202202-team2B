@@ -21,7 +21,7 @@ function answer(){
     }else if(A == 26){
         text = "「POSSE2で頼られるタイプ」";
     }else{
-        text = "";
+        return;
     }
     document.getElementById("kotae").innerHTML = text;
 }
