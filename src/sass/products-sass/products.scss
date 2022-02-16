@@ -707,7 +707,7 @@ a.btn--circle:hover {
 
 @media screen and (max-width: 430px){
   .marubatsu {
-    height: 500rem;
+    height: 400rem;
     box-sizing: border-box;
     font-size: 16px;
     margin: 0;
@@ -840,5 +840,88 @@ a.btn--circle:hover {
     .js-highLight {
       background-color: #fff2cc;
     }
+  }
+}
+
+.kanyuu {
+  position: relative;
+  color: #FF5757;
+  font-size: 30rem;
+  font-weight: bold;
+}
+
+.kanyuu::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  padding-bottom: 1px;
+  background: #FF5757;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+.kanyuu:hover::after {
+  transform: scale(1, 1);
+}
+
+
+.form {
+  width: 500rem;
+  height: 180rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-word {
+  font-size: 25rem;
+  color: #FF5757;
+  font-weight: bold;
+}
+
+.yajirusi {
+  margin: 20rem 0 10rem 0;
+}
+
+.arrow-bottom {
+  margin-top: 20rem;
+  font-size: 30rem;
+  animation: updown 2s infinite ease-in-out;
+  color: #FF5757;
+}
+
+@keyframes updown {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    width: 300rem;
+    height: 100rem;
+  }
+
+  .kanyuu {
+    font-size: 20rem;
+    width: 200rem;
+    height: 100rem;
+  }
+
+  .arrow-bottom {
+    font-size: 20rem;
+  }
+
+  .yajirusi{
+    width: 300rem;
   }
 }

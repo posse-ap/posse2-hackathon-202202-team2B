@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   height: 1.07rem;
   position: fixed;
@@ -73,6 +74,28 @@ header li {
   transform: scale(1, 1);
 }
 
+@media (max-width: 600px) {
+  header .lists {
+    /* 横スクロールを表示 */
+    overflow-x: scroll;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  header li {
+    margin: 0rem;
+    padding: 10rem 60rem 10rem 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  header ul {
+    display: block;
+    padding: 0 16rem;
+  }
+}
 footer {
   width: 100%;
   z-index: -1;
