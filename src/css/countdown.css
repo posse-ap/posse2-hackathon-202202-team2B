@@ -1,5 +1,5 @@
 /* Google Fonts 読み込み */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@700&family=Share+Tech+Mono&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@700&family=Share+Tech+Mono&display=swap'); */
 
 html{
   font-size: 6.25%;
@@ -14,7 +14,7 @@ html{
 /* 全体を囲うコンテナー＆背景 */
 .container {
   position: relative;
-  background-image: url('bg.jpg');
+  /* background-image: url('bg.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

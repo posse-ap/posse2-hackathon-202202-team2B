@@ -13,8 +13,8 @@ const ceremony = new Date(`June 04 ${currentYear} 10:00:00`);
 // const ceremonyTime = new Date(`January 01 ${nextYear} 00:00:00`);
 
 // 来年の値をDOMに追加
-ceremonyDay.innerText = "入学式まであと!!";
-console.log(ceremony);
+// ceremonyDay.innerText = "Entrance ceremony!!";
+// console.log(ceremony);
 
 // カウントダウンの関数
 function updateCountdown() {

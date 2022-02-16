@@ -1,0 +1,316 @@
+@use "../partial-sass/header";
+@use "../partial-sass/footer";
+
+html{
+  font-size: 6.25%;
+}
+
+// ここからタイムライン
+.timeline {
+    width: 96%;
+    max-width: 600px;
+    margin: 130px auto;
+    position: relative;
+    // border: 1px solid #eeeeee;
+    
+    &-list {
+        padding: 40px 0;
+        padding-left: 80px;
+        
+        &-item {
+            display: flex;
+            line-height: 1.5;
+            font-size: 16px;
+
+
+        &-1{
+            animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-2{
+            animation-name:fadeInAnime;
+            animation-duration:1s;
+            animation-fill-mode:forwards;
+            opacity:0;
+            animation-delay: 0.3s;
+  
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-3{
+            animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+            animation-delay: 0.6s;
+
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-4{
+            animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+            animation-delay: 0.9s;      
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-5{
+           
+          
+            opacity : 0;
+            transition: opacity 1s;
+
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #00c2bc;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-6{
+           
+          
+            opacity : 0;
+            transition: opacity 1s;
+
+            .date {
+                width: 20%;
+                padding: 0 0 0 20px;
+                color: #888888;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            
+            .content {
+                position: relative;
+                width: 80%;
+                padding: 0 20px 60px 30px;
+                border-left: 1px solid #aaaaaa;
+                white-space: nowrap;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #000;
+                    border-radius: 10px;
+                }
+            }
+        }
+            .view{
+                opacity: 1;
+            }
+            
+        }
+    }
+}
+
+
+.fade{
+    margin-top: 80vh;
+    text-align: center;
+    opacity : 0;
+    transition: opacity 3s;
+  }
+   
+  .fade.view{
+    opacity: 1;
+  }
+
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .timeline img{
+    position: absolute;
+    animation-name:fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+  }
+
+  .image-1{
+      width: 370rem;
+      height: 220rem;
+      object-fit: cover;
+      top: 50rem;
+      left: -330rem;
+  }
+
+  .image-2{
+    width: 300rem;
+    height: 320rem;
+    object-fit: cover;
+    top: 200rem;
+    left: 600rem;
+    animation-delay: 0.3s;
+}
+
+.image-3{
+  width: 370rem;
+  height: 220rem;
+  object-fit: cover;
+  top: 400rem;
+  left: -330rem;
+  animation-delay: 0.6s;
+}
+
+.image-4{
+  width: 370rem;
+  height: 220rem;
+  object-fit: cover;
+  top: 600rem;
+  left: 600rem;
+  animation-delay: 0.9s;
+}
+
+.image-5{
+  width: 370rem;
+  height: 220rem;
+  object-fit: cover;
+  top: 800rem;
+  left: -330rem;
+}
+
+
+@media screen and (max-width: 1350px) {
+  .timeline {
+    margin: 0;
+  }
+
+  .timeline-list{
+    margin: 0;
+  }
+}
