@@ -1,9 +1,11 @@
+@charset "UTF-8";
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
 header {
   height: 1.07rem;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 51;
 }
 
 header, footer a {
@@ -73,6 +75,28 @@ header li {
   transform: scale(1, 1);
 }
 
+@media (max-width: 600px) {
+  header .lists {
+    /* 横スクロールを表示 */
+    overflow-x: scroll;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  header li {
+    margin: 0rem;
+    padding: 10rem 60rem 10rem 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  header ul {
+    display: block;
+    padding: 0 16rem;
+  }
+}
 footer {
   width: 100%;
   z-index: -1;
@@ -259,6 +283,7 @@ footer {
 }
 @media screen and (max-width: 610px) {
   footer {
+    width: 100%;
     height: 100rem;
   }
 
@@ -267,22 +292,24 @@ footer {
   }
 
   .footer {
+    width: 100%;
     height: 100rem;
     align-items: flex-end;
   }
 
-  .footer-introduction {
+  ul .footer-introduction {
     margin-bottom: 20rem;
-    margin-right: 20rem;
+    margin: 20rem;
   }
 
   .company {
-    margin-bottom: 20rem;
-    margin-left: 20rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 200rem;
   }
 
   .sns {
-    width: 200rem;
+    width: 100%;
   }
 
   .sns a {
@@ -290,7 +317,7 @@ footer {
   }
 
   .footer-introduction li {
-    margin-right: 10rem;
+    margin: 0 5rem;
   }
 
   .sns a:hover span {
@@ -299,6 +326,817 @@ footer {
 }
 html {
   font-size: 6.25%;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.game {
+  position: absolute;
+  top: -70rem;
+  font-size: 50rem;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+}
+
+.game-2 {
+  position: absolute;
+  top: 0rem;
+  font-size: 30rem;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+}
+
+.wrap {
+  animation: fadein 3s forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn,
+a.btn,
+button.btn {
+  z-index: 50;
+  font-size: 40rem;
+  position: relative;
+  display: inline-block;
+  padding: 16rem 44rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #212529;
+  border-radius: 8rem;
+}
+
+a.btn--circle {
+  width: 400rem;
+  height: 180rem;
+  border-radius: 50%;
+  color: #fff;
+  background: #0d3b75;
+  -webkit-box-shadow: 0 7rem 0 #1d2d52;
+  box-shadow: 0 6rem 0 #1d2d52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rem;
+}
+
+.game-button {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 500rem;
+  width: 100%;
+}
+
+.btn-1 {
+  position: absolute;
+  top: 0rem;
+  left: 150rem;
+}
+
+.btn-2 {
+  position: absolute;
+  top: 0rem;
+  right: 150rem;
+}
+
+a.btn--circle i {
+  font-size: 40rem;
+}
+
+.fa-position-bottom {
+  position: absolute;
+  bottom: 16rem;
+  left: calc(50% - 8rem);
+}
+
+a.btn--circle:hover {
+  -webkit-transform: translate(0, 4rem);
+  transform: translate(0, 4rem);
+  color: #fff;
+  -webkit-box-shadow: 0 3rem 0 #e53b4e;
+  box-shadow: 0 3rem 0 #e53b4e;
+}
+
+.container {
+  width: 100%;
+  height: 700rem;
+  margin: 0 auto;
+}
+
+.display {
+  position: relative;
+  width: 808rem;
+  height: 600rem;
+  border-radius: 10px;
+  background: #333;
+  border: 4rem solid #FF5757;
+  margin: 0 auto 20rem auto;
+}
+
+.title-1 {
+  margin: 0 auto;
+  height: 80rem;
+  text-align: center;
+  font-size: 35rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-image: linear-gradient(135deg, #333 25%, transparent 25%), linear-gradient(225deg, #333 25%, transparent 25%), linear-gradient(45deg, #333 25%, transparent 25%), linear-gradient(315deg, #333 25%, #000 25%);
+  background-position: 20px 0, 20px 0, 0 0, 0 0;
+  background-size: 40px 40px;
+  background-repeat: repeat;
+}
+
+.bar {
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  object-fit: cover;
+  background-color: #339999;
+}
+
+.image-posse {
+  width: 200rem;
+  height: 60rem;
+  object-fit: cover;
+}
+
+.block {
+  position: absolute;
+  box-sizing: border-box;
+  width: 200px;
+  height: 70px;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+  background: #66b1d4;
+}
+
+.block::before {
+  content: "悩み";
+  font-size: 40rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background: #ff3333;
+  border: 2px solid #ffffff;
+}
+
+.explain-label {
+  position: absolute;
+  text-align: center;
+  width: 400px;
+  font-size: 20px;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.left-button,
+.right-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #FF5757;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    height: 590rem;
+    margin: 0 auto;
+  }
+
+  .display {
+    position: relative;
+    width: 404rem;
+    height: 285rem;
+    border-radius: 5px;
+    background: #333;
+    border: 2em solid #FF5757;
+    margin: 0 auto 10rem auto;
+  }
+
+  .bar {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    object-fit: cover;
+    background-color: #339999;
+  }
+
+  .image-posse {
+    width: 100rem;
+    height: 30rem;
+    object-fit: cover;
+  }
+
+  .block {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100px;
+    height: 35px;
+    border-radius: 2px;
+    border: 1px solid #ffffff;
+    background: #66b1d4;
+  }
+
+  .block::before {
+    content: "悩み";
+    font-size: 20rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ball {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 15px;
+    background: #ff3333;
+    border: 1px solid #ffffff;
+  }
+
+  .explain-label {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    font-size: 10px;
+    color: #ffffff;
+    pointer-events: none;
+  }
+
+  .left-button,
+.right-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #FF5757;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid #ffffff;
+  }
+}
+@media screen and (max-width: 450px) {
+  .display {
+    width: 303rem;
+  }
+}
+.marubatsu {
+  height: 670rem;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  line-height: normal;
+  /* JS連動 */
+}
+.marubatsu *,
+.marubatsu *::before,
+.marubatsu *::after {
+  box-sizing: border-box;
+}
+.marubatsu h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.marubatsu .wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+.marubatsu .game-container {
+  padding: 0px 0;
+}
+.marubatsu .message-container {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.marubatsu .batsu {
+  color: #00b0f0;
+}
+.marubatsu .maru {
+  color: #ff0000;
+}
+.marubatsu .js-hidden {
+  display: none;
+}
+.marubatsu .hidden {
+  visibility: hidden;
+}
+.marubatsu .squares-container {
+  margin: 0 auto;
+  width: 404px;
+}
+.marubatsu .squares-box {
+  width: 404px;
+  height: 404px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 4px #333;
+}
+.marubatsu .square {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  border: solid 4px #333;
+}
+.marubatsu .js-maru-checked::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: solid 16px #ff0000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.marubatsu .js-batsu-checked::before {
+  content: "";
+  width: 100px;
+  height: 16px;
+  margin: auto;
+  background-color: #00b0f0;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.marubatsu .js-batsu-checked::after {
+  content: "";
+  width: 16px;
+  height: 100px;
+  margin: auto;
+  background-color: #00b0f0;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.marubatsu .js-hidden {
+  font-size: 30rem;
+}
+.marubatsu .message-list li {
+  height: 40rem;
+  font-size: 45rem;
+  margin-bottom: 20rem;
+}
+.marubatsu .btn-container {
+  padding-top: 40px;
+}
+.marubatsu .btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.marubatsu .btn-reset {
+  color: #fff;
+  background-color: #FF5757;
+  font-weight: bold;
+}
+.marubatsu .btn-reset:hover {
+  background-color: #ffd347;
+  transition-duration: 0.4s;
+}
+.marubatsu .js-unclickable {
+  pointer-events: none;
+}
+.marubatsu .js-highLight {
+  background-color: #fff2cc;
+}
+
+.form-1 {
+  font-size: 25rem;
+  padding: 15rem;
+  margin-bottom: 10rem;
+  color: blue;
+  border-bottom: 1rem;
+  position: relative;
+}
+
+.form-1::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  transform: rotate(-20deg);
+}
+
+.form-1::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+  top: 13px;
+  right: 0px;
+  transform: rotate(20deg);
+}
+
+.form-1:hover {
+  color: #FF5757;
+}
+
+.title {
+  width: 100%;
+  height: 80rem;
+  font-size: 35rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1150px) {
+  a.btn--circle {
+    width: 300rem;
+    height: 150rem;
+    font-size: 30rem;
+  }
+
+  a.btn--circle i {
+    font-size: 30rem;
+  }
+}
+@media screen and (max-width: 930px) {
+  a.btn--circle {
+    width: 200rem;
+    height: 90rem;
+    font-size: 20rem;
+  }
+
+  a.btn--circle i {
+    font-size: 20rem;
+  }
+
+  a.btn {
+    padding: 12rem 20rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  a.btn--circle {
+    width: 150rem;
+    height: 70rem;
+    font-size: 15rem;
+  }
+
+  a.btn--circle i {
+    font-size: 15rem;
+  }
+
+  .btn-1 {
+    left: 80rem;
+  }
+
+  .btn-2 {
+    right: 80rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btn-1 {
+    left: 40rem;
+  }
+
+  .btn-2 {
+    right: 40rem;
+  }
+
+  .game-2 {
+    font-size: 20rem;
+  }
+
+  .game {
+    font-size: 35rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .btn-1 {
+    left: 20rem;
+  }
+
+  .btn-2 {
+    right: 20rem;
+  }
+
+  .game-2 {
+    font-size: 15rem;
+  }
+
+  .game {
+    font-size: 25rem;
+  }
+
+  .container {
+    height: 400rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .marubatsu {
+    height: 400rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    line-height: normal;
+    /* JS連動 */
+  }
+  .marubatsu *,
+.marubatsu *::before,
+.marubatsu *::after {
+    box-sizing: border-box;
+  }
+  .marubatsu h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .marubatsu .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .marubatsu .game-container {
+    padding: 0px 0;
+  }
+  .marubatsu .message-container {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .marubatsu .batsu {
+    color: #00b0f0;
+  }
+  .marubatsu .maru {
+    color: #ff0000;
+  }
+  .marubatsu .js-hidden {
+    display: none;
+  }
+  .marubatsu .hidden {
+    visibility: hidden;
+  }
+  .marubatsu .squares-container {
+    margin: 0 auto;
+    width: 202px;
+  }
+  .marubatsu .squares-box {
+    width: 202px;
+    height: 202px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px #333;
+  }
+  .marubatsu .square {
+    position: relative;
+    width: 66px;
+    height: 66px;
+    border: solid 2px #333;
+  }
+  .marubatsu .js-maru-checked::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: solid 8px #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .marubatsu .js-batsu-checked::before {
+    content: "";
+    width: 50px;
+    height: 8px;
+    margin: auto;
+    background-color: #00b0f0;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .marubatsu .js-batsu-checked::after {
+    content: "";
+    width: 8px;
+    height: 50px;
+    margin: auto;
+    background-color: #00b0f0;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .marubatsu .js-hidden {
+    font-size: 30rem;
+  }
+  .marubatsu .message-list li {
+    height: 40rem;
+    font-size: 45rem;
+    margin-bottom: 20rem;
+  }
+  .marubatsu .btn-container {
+    padding-top: 40px;
+  }
+  .marubatsu .btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .marubatsu .btn-reset {
+    color: #fff;
+    background-color: #FF5757;
+    font-weight: bold;
+  }
+  .marubatsu .btn-reset:hover {
+    background-color: #ffd347;
+    transition-duration: 0.4s;
+  }
+  .marubatsu .js-unclickable {
+    pointer-events: none;
+  }
+  .marubatsu .js-highLight {
+    background-color: #fff2cc;
+  }
+}
+.kanyuu {
+  position: relative;
+  color: #FF5757;
+  font-size: 30rem;
+  font-weight: bold;
+}
+
+.kanyuu::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  padding-bottom: 1px;
+  background: #FF5757;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+.kanyuu:hover::after {
+  transform: scale(1, 1);
+}
+
+.form {
+  width: 500rem;
+  height: 180rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-word {
+  font-size: 25rem;
+  color: #FF5757;
+  font-weight: bold;
+}
+
+.yajirusi {
+  margin: 20rem 0 10rem 0;
+}
+
+.arrow-bottom {
+  margin-top: 20rem;
+  font-size: 30rem;
+  animation: updown 2s infinite ease-in-out;
+  color: #FF5757;
+}
+
+@keyframes updown {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@media (max-width: 600px) {
+  .form {
+    width: 300rem;
+    height: 100rem;
+  }
+
+  .kanyuu {
+    font-size: 20rem;
+    width: 200rem;
+    height: 100rem;
+  }
+
+  .arrow-bottom {
+    font-size: 20rem;
+  }
+
+  .yajirusi {
+    width: 300rem;
+  }
 }
 
 /*# sourceMappingURL=products.css.map */

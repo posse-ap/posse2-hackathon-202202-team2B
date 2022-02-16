@@ -23,7 +23,8 @@ header, footer a {
 header img {
   height: 80rem;
   width: 300rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 header ul {
@@ -118,7 +119,8 @@ footer {
 .img2 {
   height: 80rem;
   width: 300rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {
@@ -187,9 +189,6 @@ footer {
   width: 40px;
   height: 40px;
   margin: 0 25px;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-font-smoothing: antialiased;
 }
@@ -217,9 +216,6 @@ footer {
   background: #FF5757;
   visibility: hidden;
   opacity: 0;
-  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -341,7 +337,7 @@ body {
   left: 0px;
   margin-right: 5%;
   background: radial-gradient(#FFFFFF, #FF5757);
-  z-index: 2;
+  z-index: 52;
 }
 
 #loader {
@@ -355,7 +351,7 @@ body {
   margin: 0;
   text-align: center;
   color: #fff;
-  z-index: 3;
+  z-index: 52;
 }
 
 .image-1 {
@@ -617,7 +613,6 @@ button.btn {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   text-align: center;
   vertical-align: middle;
@@ -714,7 +709,8 @@ button.btn {
 
   #message2 {
     margin: 20rem;
-    text-decoration: block;
+    -webkit-text-decoration: block;
+            text-decoration: block;
   }
 
   .closeModal {
