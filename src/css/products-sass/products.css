@@ -449,30 +449,72 @@ a.btn--circle:hover {
   box-shadow: 0 3rem 0 #e53b4e;
 }
 
+.container {
+  width: 100%;
+  height: 700rem;
+  margin: 0 auto;
+}
+
 .display {
   position: relative;
-  width: 100vw;
-  height: 670rem;
+  width: 808rem;
+  height: 600rem;
   border-radius: 10px;
   background: #333;
-  border: 2px solid #cc7799;
+  border: 4rem solid #FF5757;
+  margin: 0 auto 20rem auto;
+}
+
+.title-1 {
+  margin: 0 auto;
+  height: 80rem;
+  text-align: center;
+  font-size: 35rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-image: linear-gradient(135deg, #333 25%, transparent 25%), linear-gradient(225deg, #333 25%, transparent 25%), linear-gradient(45deg, #333 25%, transparent 25%), linear-gradient(315deg, #333 25%, #000 25%);
+  background-position: 20px 0, 20px 0, 0 0, 0 0;
+  background-size: 40px 40px;
+  background-repeat: repeat;
 }
 
 .bar {
   position: absolute;
-  width: 60px;
+  width: 200px;
   height: 20px;
+  object-fit: cover;
   background-color: #339999;
+}
+
+.image-posse {
+  width: 200rem;
+  height: 60rem;
+  object-fit: cover;
 }
 
 .block {
   position: absolute;
   box-sizing: border-box;
-  width: 20px;
-  height: 20px;
+  width: 200px;
+  height: 70px;
   border-radius: 4px;
   border: 2px solid #ffffff;
-  background: #339999;
+  background: #66b1d4;
+}
+
+.block::before {
+  content: "悩み";
+  font-size: 40rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ball {
@@ -503,7 +545,7 @@ a.btn--circle:hover {
   font-size: 28px;
   font-weight: bold;
   color: #ffffff;
-  background: #99ff9980;
+  background: #FF5757;
   width: 100px;
   height: 50px;
   text-align: center;
@@ -511,6 +553,98 @@ a.btn--circle:hover {
   border: 2px solid #ffffff;
 }
 
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    height: 590rem;
+    margin: 0 auto;
+  }
+
+  .display {
+    position: relative;
+    width: 404rem;
+    height: 285rem;
+    border-radius: 5px;
+    background: #333;
+    border: 2em solid #FF5757;
+    margin: 0 auto 10rem auto;
+  }
+
+  .bar {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    object-fit: cover;
+    background-color: #339999;
+  }
+
+  .image-posse {
+    width: 100rem;
+    height: 30rem;
+    object-fit: cover;
+  }
+
+  .block {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100px;
+    height: 35px;
+    border-radius: 2px;
+    border: 1px solid #ffffff;
+    background: #66b1d4;
+  }
+
+  .block::before {
+    content: "悩み";
+    font-size: 20rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ball {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 15px;
+    background: #ff3333;
+    border: 1px solid #ffffff;
+  }
+
+  .explain-label {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    font-size: 10px;
+    color: #ffffff;
+    pointer-events: none;
+  }
+
+  .left-button,
+.right-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #FF5757;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid #ffffff;
+  }
+}
+@media screen and (max-width: 450px) {
+  .display {
+    width: 303rem;
+  }
+}
 .marubatsu {
   height: 670rem;
   box-sizing: border-box;
@@ -536,7 +670,7 @@ a.btn--circle:hover {
   text-align: center;
 }
 .marubatsu .game-container {
-  padding: 60px 0;
+  padding: 0px 0;
 }
 .marubatsu .message-container {
   margin-bottom: 20px;
@@ -557,26 +691,26 @@ a.btn--circle:hover {
 }
 .marubatsu .squares-container {
   margin: 0 auto;
-  width: 202px;
+  width: 404px;
 }
 .marubatsu .squares-box {
-  width: 202px;
-  height: 202px;
+  width: 404px;
+  height: 404px;
   display: flex;
   flex-wrap: wrap;
-  border: solid 2px #333;
+  border: solid 4px #333;
 }
 .marubatsu .square {
   position: relative;
-  width: 66px;
-  height: 66px;
-  border: solid 2px #333;
+  width: 132px;
+  height: 132px;
+  border: solid 4px #333;
 }
 .marubatsu .js-maru-checked::before {
   content: "";
-  width: 50px;
-  height: 50px;
-  border: solid 8px #ff0000;
+  width: 100px;
+  height: 100px;
+  border: solid 16px #ff0000;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -585,11 +719,11 @@ a.btn--circle:hover {
 }
 .marubatsu .js-batsu-checked::before {
   content: "";
-  width: 50px;
-  height: 8px;
+  width: 100px;
+  height: 16px;
   margin: auto;
   background-color: #00b0f0;
-  border-radius: 4px;
+  border-radius: 8px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -597,15 +731,23 @@ a.btn--circle:hover {
 }
 .marubatsu .js-batsu-checked::after {
   content: "";
-  width: 8px;
-  height: 50px;
+  width: 16px;
+  height: 100px;
   margin: auto;
   background-color: #00b0f0;
-  border-radius: 4px;
+  border-radius: 8px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
+}
+.marubatsu .js-hidden {
+  font-size: 30rem;
+}
+.marubatsu .message-list li {
+  height: 40rem;
+  font-size: 45rem;
+  margin-bottom: 20rem;
 }
 .marubatsu .btn-container {
   padding-top: 40px;
@@ -619,7 +761,7 @@ a.btn--circle:hover {
 }
 .marubatsu .btn-reset {
   color: #fff;
-  background-color: #ffc000;
+  background-color: #FF5757;
   font-weight: bold;
 }
 .marubatsu .btn-reset:hover {
@@ -631,6 +773,53 @@ a.btn--circle:hover {
 }
 .marubatsu .js-highLight {
   background-color: #fff2cc;
+}
+
+.form-1 {
+  font-size: 25rem;
+  padding: 15rem;
+  margin-bottom: 10rem;
+  color: blue;
+  border-bottom: 1rem;
+  position: relative;
+}
+
+.form-1::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  transform: rotate(-20deg);
+}
+
+.form-1::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+  top: 13px;
+  right: 0px;
+  transform: rotate(20deg);
+}
+
+.form-1:hover {
+  color: #FF5757;
+}
+
+.title {
+  width: 100%;
+  height: 80rem;
+  font-size: 35rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 1150px) {
@@ -710,6 +899,141 @@ a.btn--circle:hover {
 
   .game {
     font-size: 25rem;
+  }
+
+  .container {
+    height: 400rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .marubatsu {
+    height: 500rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    line-height: normal;
+    /* JS連動 */
+  }
+  .marubatsu *,
+.marubatsu *::before,
+.marubatsu *::after {
+    box-sizing: border-box;
+  }
+  .marubatsu h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .marubatsu .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .marubatsu .game-container {
+    padding: 0px 0;
+  }
+  .marubatsu .message-container {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .marubatsu .batsu {
+    color: #00b0f0;
+  }
+  .marubatsu .maru {
+    color: #ff0000;
+  }
+  .marubatsu .js-hidden {
+    display: none;
+  }
+  .marubatsu .hidden {
+    visibility: hidden;
+  }
+  .marubatsu .squares-container {
+    margin: 0 auto;
+    width: 202px;
+  }
+  .marubatsu .squares-box {
+    width: 202px;
+    height: 202px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px #333;
+  }
+  .marubatsu .square {
+    position: relative;
+    width: 66px;
+    height: 66px;
+    border: solid 2px #333;
+  }
+  .marubatsu .js-maru-checked::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: solid 8px #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .marubatsu .js-batsu-checked::before {
+    content: "";
+    width: 50px;
+    height: 8px;
+    margin: auto;
+    background-color: #00b0f0;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .marubatsu .js-batsu-checked::after {
+    content: "";
+    width: 8px;
+    height: 50px;
+    margin: auto;
+    background-color: #00b0f0;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .marubatsu .js-hidden {
+    font-size: 30rem;
+  }
+  .marubatsu .message-list li {
+    height: 40rem;
+    font-size: 45rem;
+    margin-bottom: 20rem;
+  }
+  .marubatsu .btn-container {
+    padding-top: 40px;
+  }
+  .marubatsu .btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .marubatsu .btn-reset {
+    color: #fff;
+    background-color: #FF5757;
+    font-weight: bold;
+  }
+  .marubatsu .btn-reset:hover {
+    background-color: #ffd347;
+    transition-duration: 0.4s;
+  }
+  .marubatsu .js-unclickable {
+    pointer-events: none;
+  }
+  .marubatsu .js-highLight {
+    background-color: #fff2cc;
   }
 }
 

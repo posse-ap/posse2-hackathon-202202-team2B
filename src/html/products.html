@@ -21,7 +21,7 @@
           let target = $(href == "#" || href == "" ? "html" : href);
           // let header = $("header:last");
           // let offset = header.offset();
-          let position = target.offset().top-127;
+          let position = target.offset().top-207;
           
           $("body,html").animate({ scrollTop: position }, speed, "swing");
           return false;
@@ -83,9 +83,12 @@
 
     <!-- ブロック崩しゲーム -->
     
-
+    <div class="container">
+      <div class="title-1">
+        壁当てゲーム
+      </div>
       <div class="display" id="1">
-        <div class="bar"></div>
+        <div class="bar"><img src="/src/image/10.png" alt="" class="image-posse"></div>
         <div class="ball"></div>
         <div class="explain-label">click to start</div>
         <div class="left-button">
@@ -95,9 +98,13 @@
           <div>→</div>
         </div>
       </div>
+    </div>
     
 
     <!-- マルバツゲーム -->
+    <div class="title">
+      マルバツゲーム
+    </div>
     <div class="marubatsu" id="2">
       <!-- <h1> -->
     
@@ -110,7 +117,7 @@
                 </li>
                 <li id="batsu-turn"><span class="batsu">×</span>の番</li>
                 <li id="maru-win" class="js-hidden">
-                  <span class="maru">○</span>の勝ち！
+                  <a href="https://forms.gle/GTE3xS6ks7Wwt1Rk8" class="form-1">POSSE②加入希望フォームはこちら！</a>
                 </li>
                 <li id="batsu-win" class="js-hidden">
                   <span class="batsu">×</span>の勝ち！
@@ -144,7 +151,7 @@
             
             <div>
               <div>
-                <span id="wait" class="btn btn-reset">ちょっと待てい</span>
+                <span id="wait" class="btn btn-reset">一手戻る</span>
               </div>
             </div>
           </div>
