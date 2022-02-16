@@ -39,6 +39,22 @@ body{
   transform: translate(-50% ,-50%);
 }
 
+@media(max-width:700px) {
+  #loader-bg{
+    #loader{
+      .original-gredient{
+        .logo-test{
+          .image-1{
+            width: 250rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 
 // ここからトップボタン
 .topbtn{
@@ -73,14 +89,11 @@ body{
     align-items: center;
     justify-content: center;
     z-index: 1000;
-
     &::before{
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      // width: 100%;
-      // height: 100%;
       background-color: rgb(252,87,88,0);  
     }
 
@@ -127,62 +140,28 @@ body{
   }
 }
 
+// カウントダウンのレスポンシブ
+
 @media(max-width:600px) {
-  header .lists{
-  /* 横スクロールを表示 */
-  overflow-x: scroll;
-  margin: 0;
-  white-space: nowrap;
-  }
-
-  header  li{
-      margin: 0rem;
-      padding: 10rem 60rem 10rem 0;
-  }
-
-  .logo{
-      margin: 0;
-  }
-
-  header ul{
-      display: block;
-      padding: 0 16rem;
-  }
-
-  // クイズのモーダル
-  .quiz-wrapper{
-      height: 400rem;
+  .topbtn{
+    width: 100rem;
+    height: 80rem;
+    .container{
+      .countdown{
+        .countdown-title{
+          font-size: 6rem;
+        }
+        .time-container{
+          flex-wrap: wrap;
+          .time{
+            font-size: 4rem;
+          }
+        }
+      }
     }
-
-    .modalWrapper {
-      background-color: #FF5757;
   }
-
-  .modalWrapper{
-      width: 100%;
-      height: 85%;
-      top:55%;
-      padding: 0;
-  }
-
-  .quiz_title{
-      font-size: 25rem;
-  }
-
-  #message2{
-      margin: 20rem;
-      text-decoration: block;
-  }
-
-  .closeModal {
-      position: absolute;
-      top: 1rem;
-      right: 20rem;
-      cursor: pointer;
-      font-size: 50.0rem;
-  }
-
 }
+
 
 
 
