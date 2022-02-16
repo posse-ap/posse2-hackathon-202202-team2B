@@ -299,6 +299,470 @@ footer {
     visibility: hidden;
   }
 }
+.image-container {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+}
+
+.section {
+  position: relative;
+  transition: opacity 2s ease 0.75s;
+  opacity: 0;
+  width: 100%;
+}
+.section.is-show {
+  opacity: 1;
+}
+
+h2 {
+  color: #232323;
+}
+h2:first-child {
+  margin-top: 0;
+}
+
+h3 {
+  color: #232323;
+}
+
+p {
+  color: #232323;
+}
+
+.section-red {
+  background-image: url("../../image/1.png");
+  background-position: center;
+  /*アニメーションの開始から終了までを指定する*/
+}
+.section-red .screen-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  text-align: center;
+  width: 100vw;
+  transition: opacity 0.5s ease 0.75s;
+  opacity: 1;
+}
+.section-red .first-page-wrapper {
+  display: flex;
+  height: 180rem;
+  bottom: 0%;
+  right: 0;
+  position: absolute;
+  background-color: white;
+  width: 100vw;
+}
+.section-red .fade-up {
+  animation-name: fadeUpAnime;
+  /*アニメーションの定義名*/
+  animation-duration: 2s;
+  /*アニメーション変化時間 ※デフォルト*/
+  animation-fill-mode: forwards;
+  /*アニメーションの開始と終了時の状態を指定*/
+  animation-delay: 1s;
+  opacity: 0;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.section-red .first-left {
+  position: absolute;
+  left: 0;
+  color: #30221b;
+  font-size: 100rem;
+  width: 70%;
+}
+.section-red .first-right {
+  position: absolute;
+  right: 0;
+  color: #30221b;
+  font-size: 50rem;
+  width: 30%;
+}
+.section-red .first-right-text {
+  font-size: 20rem;
+  margin-top: 10rem;
+}
+
+.section-blue {
+  background-image: url("../../image/2.png");
+  background-position: center;
+}
+.section-blue .screen-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  text-align: center;
+  width: 100vw;
+  transition: opacity 0.5s ease 0.75s;
+  opacity: 0.7;
+}
+.section-blue .second-page-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+}
+.section-blue .second-button-container {
+  position: absolute;
+  margin-top: 30%;
+  left: 30%;
+  width: 40vw;
+}
+.section-blue .second-button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  width: 80%;
+  /*ボタンの幅*/
+  height: 40rem;
+  padding: 50rem;
+  margin: 30px auto;
+  background-color: #ed4545;
+  /*ボタンの色*/
+  box-shadow: 0 3px 0 0 #c62727;
+  /*影の色(rgbaの値を変更)*/
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 25rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+}
+.section-blue .second-button:hover {
+  text-decoration: none;
+  color: #fff;
+  box-shadow: none;
+  -webkit-transform: translateY(3px);
+}
+.section-blue .second-button::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  transition: 0.2s;
+  animation: second-button 3s ease-in-out infinite;
+}
+@-webkit-keyframes second-button {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+.section-blue .second-left {
+  writing-mode: vertical;
+  position: absolute;
+  width: 50%;
+  top: 750rem;
+  font-size: 100rem;
+  color: #30221b;
+  /* 上から */
+  /*アニメーションの開始から終了までを指定する*/
+}
+.section-blue .second-left .fade-up {
+  animation-name: fadeUpAnime;
+  /*アニメーションの定義名*/
+  animation-duration: 2s;
+  /*アニメーション変化時間 ※デフォルト*/
+  animation-fill-mode: forwards;
+  /*アニメーションの開始と終了時の状態を指定*/
+  animation-delay: 1s;
+  opacity: 0;
+  position: absolute;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.section-blue .second-left .second-left-line {
+  writing-mode: horizontal;
+  position: relative;
+  bottom: 90rem;
+  color: #30221b;
+}
+.section-blue .second-left .second-left-aline {
+  position: relative;
+  margin-bottom: 1000rem;
+  color: #30221b;
+}
+.section-blue .second-right {
+  position: absolute;
+  width: 60%;
+  right: -380rem;
+  display: flex;
+}
+.section-blue .second-right .second-aline {
+  writing-mode: vertical;
+}
+.section-blue .second-right .second-right-sub {
+  font-size: 50rem;
+}
+.section-blue .second-right .second-right-text {
+  margin-left: 20rem;
+  font-size: 90rem;
+}
+.section-blue .second-right fade-up {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.section-blue .second-right .fade-down {
+  animation-name: fadeDownAnime;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-green {
+  background-image: url("../../image/3.png");
+  background-position: center;
+  /*アニメーションの開始から終了までを指定する*/
+}
+.section-green .screen-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  text-align: center;
+  width: 100vw;
+  transition: opacity 0.5s ease 0.75s;
+  opacity: 0.7;
+}
+.section-green .third-page-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  text-align: center;
+}
+.section-green .fade-in {
+  animation-name: fadeInAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  opacity: 0;
+  top: 50%;
+  font-size: 80rem;
+  color: #30221b;
+}
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.section-green .third-explain-container {
+  margin-top: 100rem;
+  text-align: center;
+}
+.section-green .third-explain {
+  font-size: 30rem;
+}
+.section-green .game-button-container .fade-in {
+  animation-name: fadeInAnimeGame;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+  opacity: 0;
+  top: 50%;
+}
+@keyframes fadeInAnimeGame {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+.section-green .game-button {
+  padding-top: 40rem;
+  display: inline-block;
+  text-decoration: none;
+  color: #30221b;
+  width: 300rem;
+  height: 300rem;
+  line-height: 100px;
+  border-radius: 50%;
+  border: double 4px #30221b;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.6s;
+}
+.section-green .game-button:hover {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+.section-yellow {
+  background-image: url("../../image/4.png");
+  background-position: center;
+  color: #ed4545;
+  /*アニメーションの開始から終了までを指定する*/
+}
+.section-yellow .forth-container {
+  position: absolute;
+  display: flex;
+}
+.section-yellow .forth-right-container {
+  position: absolute;
+  right: -400rem;
+  display: flex;
+  width: 60%;
+}
+.section-yellow .forth-right-sub {
+  color: #ed4545;
+  font-size: 50rem;
+}
+.section-yellow .forth-right-title {
+  font-size: 90rem;
+  color: #ed4545;
+}
+.section-yellow .forth-left-container {
+  width: 60%;
+  margin-top: 480rem;
+}
+.section-yellow .forth-left-title {
+  font-size: 90rem;
+  color: #ed4545;
+}
+.section-yellow .fade-in {
+  animation-name: fadeInAnime;
+  /*アニメーションの定義名*/
+  animation-duration: 2s;
+  /*アニメーション変化時間 ※デフォルト*/
+  animation-fill-mode: forwards;
+  /*アニメーションの開始と終了時の状態を指定*/
+  animation-delay: 1s;
+  opacity: 0;
+}
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.section-yellow .forth-button-container {
+  position: absolute;
+  top: 54%;
+  left: 48%;
+}
+.section-yellow #forthButton {
+  font-size: 20rem;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 10rem;
+  display: block;
+  width: 350rem;
+  height: 50rem;
+  margin: 30rem auto;
+  color: #fff;
+  background: #FF5757;
+  box-shadow: 0 8rem 15rem 0 #000;
+  transition: 0.3s;
+  border-radius: 20rem;
+  text-align: center;
+  position: relative;
+}
+.section-yellow #forthButton:hover {
+  box-shadow: none;
+  transform: translate3d(0, 8px, 0);
+}
+
+.section-black {
+  background-image: url("../../image/5.png");
+  background-position: center;
+  /*アニメーションの開始から終了までを指定する*/
+}
+.section-black .fade-up {
+  animation-name: fadeUpAnime;
+  /*アニメーションの定義名*/
+  animation-duration: 2s;
+  /*アニメーション変化時間 ※デフォルト*/
+  animation-fill-mode: forwards;
+  /*アニメーションの開始と終了時の状態を指定*/
+  animation-delay: 1s;
+  opacity: 0;
+  top: 90%;
+  position: absolute;
+  font-size: 80px;
+  color: #fff;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  /*tablet用のcssを記述*/
+}
+@media screen and (min-width: 1024px) {
+  /*pc用のcssを記述*/
+}
 .main {
   position: relative;
 }
@@ -318,145 +782,50 @@ footer {
   display: block;
   width: 10px;
   height: 10px;
-  background: #fff;
+  background: lightgray;
   border-radius: 50%;
 }
 .pager .is-current a {
   background: #232323;
 }
 
-.image-container {
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-}
-
-.section {
-  transition: opacity 0.5s ease 0.75s;
-  opacity: 0;
-  width: 100%;
-}
-.section.is-show {
-  opacity: 1;
-}
-
-.section-container {
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 40px 60px;
-  text-align: center;
-  opacity: 0;
-  width: 100vw;
-  transition: opacity 0.5s ease 0.75s;
-}
-
-h2 {
-  color: #232323;
-}
-h2:first-child {
-  margin-top: 0;
-}
-
-h3 {
-  color: #232323;
-}
-
-p {
-  color: #232323;
-}
-
-.section-red {
-  background-image: url("../../image/LINE_ALBUM_220215.jpg");
-  background-position: center;
-  /*アニメーションの開始から終了までを指定する*/
-}
-.section-red .fade-up {
-  animation-name: fadeUpAnime;
-  /*アニメーションの定義名*/
-  animation-duration: 3s;
-  /*アニメーション変化時間 ※デフォルト*/
-  animation-fill-mode: forwards;
-  /*アニメーションの開始と終了時の状態を指定*/
-  animation-delay: 2s;
-  opacity: 0;
-  top: 10%;
-  position: absolute;
-  font-size: 80px;
-  color: #fff;
-}
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
+/*pc用のcssを記述*/
+@media (max-width: 639px) {
+  /*スマホ用のcssを記述*/
+  #firstLeft {
+    font-size: 50rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .first-right-sub {
+    font-size: 30rem;
+  }
+
+  a.second-button {
+    font-size: 20rem;
+  }
+
+  .first-right-text {
+    display: none;
+  }
+
+  p.fade-in.third {
+    font-size: 30rem;
+  }
+
+  p.fade-in.third-explain {
+    font-size: 20rem;
+  }
+
+  .section-yellow {
+    font-size: 40%;
+    background-size: cover;
+  }
+
+  #forthContainer {
+    margin-top: -300rem;
+    font-size: 10rem;
   }
 }
-
-.section-blue {
-  background-image: url("../../image/hackathon.jpg");
-  background-position: center;
-  /*アニメーションの開始から終了までを指定する*/
-}
-.section-blue .fade-up {
-  animation-name: fadeUpAnime;
-  /*アニメーションの定義名*/
-  animation-duration: 3s;
-  /*アニメーション変化時間 ※デフォルト*/
-  animation-fill-mode: forwards;
-  /*アニメーションの開始と終了時の状態を指定*/
-  animation-delay: 2s;
-  opacity: 0;
-  top: 50%;
-  position: absolute;
-  font-size: 80px;
-  color: #fff;
-}
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.section-green {
-  background-image: url("../../image/rookie_hackathon.jpg");
-  background-position: center;
-}
-.section-green .fade-up {
-  /*アニメーションの開始から終了までを指定する*/
-}
-.section-green .fade-up .fade-up {
-  animation-name: fadeUpAnime;
-  /*アニメーションの定義名*/
-  animation-duration: 3s;
-  /*アニメーション変化時間 ※デフォルト*/
-  animation-fill-mode: forwards;
-  /*アニメーションの開始と終了時の状態を指定*/
-  animation-delay: 2s;
-  opacity: 0;
-  top: 80%;
-  position: absolute;
-  font-size: 80px;
-  color: #fff;
-}
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 html {
   font-size: 6.25%;
   background: fixed;
@@ -588,7 +957,7 @@ button:hover {
   display: block;
   width: 300px;
   height: 70px;
-  margin: 40px auto 0;
+  margin: 40rem auto 0;
   color: #fff;
   background: #FF5757;
   box-shadow: 0 8px 15px 0 #000;
@@ -751,6 +1120,9 @@ button.btn {
     cursor: pointer;
     font-size: 50rem;
   }
+}
+.last-page {
+  padding-top: 600rem;
 }
 
 /*# sourceMappingURL=top.css.map */

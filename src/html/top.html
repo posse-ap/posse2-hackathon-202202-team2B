@@ -1,167 +1,167 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>トップページ</title>
-    <link rel="stylesheet" href="/src/reset.css">
-    <link rel="stylesheet" href="../css/top-sass/top.css">
-    <script type="module" src="/src/js/main.js" defer></script>
-    
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>トップページ</title>
+  <link rel="stylesheet" href="/src/reset.css">
+  <link rel="stylesheet" href="../css/top-sass/top.css">
+
+
+
 </head>
+
 <body>
-    <header>
-      <h1 class="logo">
-        <a href="#"><img src="/src/image/10.png" alt="Travel Blog" /></a>
-      </h1>
-      <ul>
-        <div class="lists">
-          <li><a href="/src/html/top.html" class="list hover_action">Home</a></li>
-          <li><a href="/src/html/ayumi.html" class="list hover_action">Timeline</a></li>
-          <li><a href="/src/html/products.html" class="list hover_action">Products</a></li>
-          <li><a href="/src/html/free.html" class="list hover_action">Free</a></li>
-        </div>
-      </ul>
-    </header>
-
-    <!-- ここからスライドショー -->
-
-    <div class="main">
-      <section class="section section-red js-section" data-section-name="section1">
-     
-        <div class="section-contentainer">
- 
-
-        </div>
-   
-           
   
-      </section>
-      
-      <section class="section section-blue js-section" data-section-name="section2">
-        <div class="section-contentainer">
-          <div class="section-content">
-            
-          </div>
-          
+  <!-- ここからスライドショー -->
+
+  <div class="main">
+    <section id="youkoso" class="section section-red js-section" data-section-name="section1">
+      <div class="remove">
+        <div class="section-container">
+          <div class=" fade-up">こんにちは</div>
+
         </div>
-        
-       
-        
-      </section>
-      <section class="section section-green js-section" data-section-name="section3">
-        <div class="section-contentainer">
-          <div class="section-content">
-            
-          </div>
+      </div>
+
+
+
+    </section>
+
+    <section class="section section-blue js-section" data-section-name="section2">
+      <div class="remove">
+        <div class="section-container"></div>
+
+
+
+
+      </div>
+
+    </section>
+    <section class="section section-green js-section" data-section-name="section3">
+      <div class="remove">
+        <div class="section-container">
+
         </div>
-       
-       
-        </section>
-      <section class="section section-green js-section" data-section-name="section3">
-        <div class="section-contentainer">
-          <div class="section-content">
-            
-          </div>
+      </div>
+
+
+
+    </section>
+    <section class="section section-yellow js-section" data-section-name="section4">
+      <div class="remove">
+        <div class="section-container">
+
         </div>
-       
-       
-        </section>
-      <ul class="pager" id="js-pager"></ul>
-    </div>
+      </div>
 
-<!-- ヘッダーのしたに隠れてしまうため、brで改行 -->
-
-
-
-<!-- クイズ -->
-<section class="js-section">
-  <p>POSSE2の特徴を掴めたかな？</p>
-  <p>POSSE2をご参加希望の方はこちらへ</p>
+    </section>
   
-<button class="btn record_register " id="openModal"><span>〜クイズ〜 <br/>　POSSE2の特徴を掴もう！</span></button>
-<section id="modalArea" class="modalArea">
-    <div id="modalBg" class="modalBg"></div>
-        <div class="modalWrapper">
-                <h2 class="quiz_title">〜クイズ〜 <br/>POSSE2の特徴を掴もう！</h2>
+
+
+    <!-- ヘッダーのしたに隠れてしまうため、brで改行 -->
+
+    <section class=" section section-black js-section" data-section-name="section5">
+      <div class="last-page" id="lastPage">
+        
+
+        <button class="btn record_register " id="openModal"><span>〜クイズ〜 <br />　POSSE2の特徴を掴もう！</span></button>
+        <section id="modalArea" class="modalArea">
+          <div id="modalBg" class="modalBg"></div>
+          <div class="modalWrapper">
+            <h2 class="quiz_title">〜クイズ〜 <br />POSSE2の特徴を掴もう！</h2>
             <div class="quiz-wrapper">
-                <div class="quiz-container">
-                    <div id="quiz-header">
-                      <h2 id="question">Question text</h2>
-                        <br>
-                      <form id="quiz-form" name="quizForm">
-                        <ul class="questions">
-                          <li>
-                            <input type="radio" id="a" name="answer" value="a" />
-                            <label id="a-text" for="a">Question</label>
-                          </li>
-                          <li>
-                            <input type="radio" id="b" name="answer" value="b" />
-                            <label id="b-text"  for="b">Question</label>
-                          </li>
-                          <li>
-                            <input type="radio" id="c" name="answer" value="c" />
-                            <label id="c-text"  for="c">Question</label>
-                          </li>
-                          <li>
-                            <input type="radio" id="d" name="answer" value="d" />
-                            <label id="d-text"  for="d">Question</label>
-                          </li>
-                        </ul>  
+              <div class="quiz-container">
+                <div id="quiz-header">
+                  <h2 id="question">Question text</h2>
+                  <br>
+                  <form id="quiz-form" name="quizForm">
+                    <ul class="questions">
+                      <li>
+                        <input type="radio" id="a" name="answer" value="a" />
+                        <label id="a-text" for="a">Question</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="b" name="answer" value="b" />
+                        <label id="b-text" for="b">Question</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="c" name="answer" value="c" />
+                        <label id="c-text" for="c">Question</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="d" name="answer" value="d" />
+                        <label id="d-text" for="d">Question</label>
+                      </li>
+                    </ul>
 
-                      </form>
-                    </div>
-                
-                    <button id="submit">回答する</button>
-                
-                    <!-- 結果表示用の要素 -->
-                    <div id="results-container">
-                      <div id="results-header">
-                        <h2 id="results"></h2>
-                        <div id="message">クイズお疲れ様！<br/>POSSE2の特徴を掴めたかな？<br/><br/></div>
-                        <a href="https://docs.google.com/forms/d/1wqY5_Vh4aR_9MLO0ajiNwIj0maHaoNwLJg1XIkdqQ6k/viewform?edit_requested=true" id="message2">POSSE2をご参加希望の方はこちらへ</a>
-                        <button id="next_quiz">次の問題へ</button>
-                      </div>
-                    </div>
+                  </form>
+                </div>
+
+                <button id="submit">回答する</button>
+
+                <!-- 結果表示用の要素 -->
+                <div id="results-container">
+                  <div id="results-header">
+                    <h2 id="results"></h2>
+                    <div id="message">クイズお疲れ様！<br />POSSE2の特徴を掴めたかな？<br /><br /></div>
+                    <a href="https://docs.google.com/forms/d/1wqY5_Vh4aR_9MLO0ajiNwIj0maHaoNwLJg1XIkdqQ6k/viewform?edit_requested=true"
+                      id="message2">POSSE2をご参加希望の方はこちらへ</a>
+                    <button id="next_quiz">次の問題へ</button>
                   </div>
+                </div>
+              </div>
             </div>
 
             <div id="closeModal" class="closeModal">
-                ×
+              ×
             </div>
-            </div>
-</section>
+          </div>
+        </section>
 
-    <!-- ここからフッター -->
-    <footer>
-      <div class="footer">
-        <!-- <div class="image2">
+        <!-- ここからフッター -->
+        <footer>
+          <div class="footer">
+            <!-- <div class="image2">
           <img src="/src/image/10.png" alt="POSSE②" class="img2" />
         </div> -->
-        <div class="company">
-            © POSSE②
-        </div>
-        <div class="sns">
-            <a href="https://twitter.com/posse_program"><img src="/src/image/45c3124e1266b580d299987d40f414d8.png" alt=""><span>Twitter</span></a>
-            <a href="https://www.instagram.com/posse_programming/"><img src="/src/image/01-removebg-preview.png" alt=""><span>Instagram</span></a>
-            <a href="https://line.me/R/ti/p/@651htnqp?from=page"><img src="/src/image/f4203978cd4de3bfdba17799dcd1f4c7.png" alt=""><span>LINE</span></a>
-            <a href="https://posse-ap.com/"><img src="/src/image/nc208365-removebg-preview.png" alt=""><span>POSSE<br>公式サイト</span></a>
-        </div>
-        <ul class="footer-introduction">
-          <li><a href="/src/html/top.html" class="introduce">Home</a>
+            <div class="company">
+              © POSSE②
+            </div>
+            <div class="sns">
+              <a href="https://twitter.com/posse_program"><img src="/src/image/45c3124e1266b580d299987d40f414d8.png"
+                  alt=""><span>Twitter</span></a>
+              <a href="https://www.instagram.com/posse_programming/"><img src="/src/image/01-removebg-preview.png"
+                  alt=""><span>Instagram</span></a>
+              <a href="https://line.me/R/ti/p/@651htnqp?from=page"><img
+                  src="/src/image/f4203978cd4de3bfdba17799dcd1f4c7.png" alt=""><span>LINE</span></a>
+              <a href="https://posse-ap.com/"><img src="/src/image/nc208365-removebg-preview.png"
+                  alt=""><span>POSSE<br>公式サイト</span></a>
+            </div>
+            <ul class="footer-introduction">
+              <li><a href="/src/html/top.html" class="introduce">Home</a>
               </li>
-          <li><a href="/src/html/ayumi.html" class="introduce">Timeline</a></li>
-          <li><a href="/src/html/products.html" class="introduce">Products</a></li>
-          <li><a href="/src/html/free.html" class="introduce">Free</a></li>
-        </ul>
-      </div>
-      
-    </footer>
-  </section>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
+              <li><a href="/src/html/ayumi.html" class="introduce">Timeline</a></li>
+              <li><a href="/src/html/products.html" class="introduce">Products</a></li>
+              <li><a href="/src/html/free.html" class="introduce">Free</a></li>
+            </ul>
+          </div>
 
-<script src="../js/main.js"></script>
+        </footer>
+
+      </div>
+    </section>
+    <ul class="pager" id="js-pager"></ul>
+  </div>
+<!-- クイズ -->
+
+   
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js" ></script>
+    <script type="module" src="/src/js/main.js" ></script>
+    
   </body>
 </html>

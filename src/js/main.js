@@ -1,5 +1,11 @@
 'use strict';
+// 変数定義
+
+
+
+
 // ここからスライドショー
+
 
 var $section = $('.js-section'); // 各スライド
 var $pager = $('#js-pager'); // ページャー枠
@@ -16,13 +22,15 @@ var option = {
   before:function(index, section) {
     setCurrent(index); // 現在のsectionにクラスを設定
     pagerCurrent(index); // ページャーに対応する順番にクラス名を付与
-    create(index);
+  
+    
    
   },
   
   afterRender:function() {
     createPager(); // ページャーの作成
     setCurrent(); // 現在のsectionにクラスを設定
+    
    
     
    
@@ -30,36 +38,226 @@ var option = {
   }
 };
 
-
+const last=document.getElementById('lastPage');
 $(function() {
   $.scrollify(option); // scrollifyの実行
 });
 
 
 
+
+
+
+
 // ==============================
 // functions
 // ------------------------------
-function create(index){
-  $('.js-section').empty();
-  if(index+1<5){
-  $('.js-section').append(`<li id="${index+1}" class="fade-up">うんンチくん</li>`);
-
-}else{
-  $('.js-section').append(`<li id="${index+1}" class="fade-up">ちんちんくん</li>`);
-}
-};
 
 
 
 // 現在のsectionにクラスを設定
 function setCurrent(index = 0) {
+  
   // 一旦、すべてのsectionのクラスをとる
+  
   $section.removeClass('is-show');
+  $section.find('div').filter('.remove').empty(); 
   
 
   // 現在のsectionのみにクラスを付与
   $section.eq(index).addClass('is-show');
+  if (index+1<5) {
+    
+    $("header").detach();
+    
+  
+
+ $section.eq(index).children('div').append(`<div id=${index+1} class="section-container"></div>`);
+//  １ページ目
+$("<div>", {
+  id: 'FirstWrapper',
+  class:'first-page-wrapper'
+}).appendTo('#1');
+ $("<p>", {
+  id: 'firstLeft',
+  text:'POSSE2へようこそ',
+  class:' fade-up first-left',
+ }).appendTo('#FirstWrapper');
+ $("<div>", {
+  id: 'firstRight',
+  class:' fade-up first-right',
+ }).appendTo('#FirstWrapper');
+ $("<p>", {
+  
+  text:'#01',
+  class:' fade-up first-right-sub',
+ }).appendTo('#firstRight');
+ $("<p>", {
+  
+  text:'POSSE2の魅力は少人数ということです。',
+  class:' fade-up first-right-text',
+ }).appendTo('#firstRight');
+ $("<p>", {
+  
+  text:'POSSE2では少人数なことを生かして',
+  class:' fade-up first-right-text',
+ }).appendTo('#firstRight');
+ $("<p>", {
+  
+  text:'一人ひとりが輝ける環境が整っています。',
+  class:' fade-up first-right-text',
+ }).appendTo('#firstRight');
+
+//  2ページ目
+$("<div>", {
+  id: 'secondWrapper',
+  class:'second-page-wrapper'
+}).appendTo('#2');
+$("<div>", {
+  id: 'secondRight',
+  class:'second-right'
+}).appendTo('#secondWrapper');
+
+$("<p>", {
+  text:'#02',
+  class:' fade-down second-right-sub',
+ }).appendTo('#secondRight');
+$("<p>", {
+  text:'POSSE2の',
+  class:' fade-down second-right-text',
+ }).appendTo('#secondRight');
+
+
+$("<div>", {
+  id: 'secondLeft',
+  class:'second-left'
+}).appendTo('#secondWrapper');
+$("<div>", {
+  id:'secondAline',
+  class:' second-aline',
+ }).appendTo('#secondLeft');
+
+
+ $("<p>", {
+  text:'歩みを見てみる',
+  class:' fade-up second-left-line',
+ }).appendTo('#secondLeft');
+
+ $("<div>", {
+  id: 'secondButton',
+  class:'second-button-container'
+}).appendTo('#secondWrapper');
+ $("<a>", {
+  href :'/src/html/ayumi.html',
+  text:'POSSE2の歩みを覗いてみる',
+  class:'second-button'
+}).appendTo('#secondButton');
+
+
+
+
+// 3ページ目
+$("<div>", {
+  id: 'thirdWrapper',
+  class:'third-page-wrapper'
+}).appendTo('#3');
+$("<p>", {
+  text:'#03',
+  class:' fade-in third_sub',
+ }).appendTo('#thirdWrapper');
+
+$("<div>", {
+  id: 'thirdTitleContainer',
+  class:'third-title-container'
+}).appendTo('#thirdWrapper');
+$("<p>", {
+  text:'自分の手で作ってみよう',
+  class:' fade-in third',
+ }).appendTo('#thirdTitleContainer');
+$("<div>", {
+  id: 'thirdExplainContainer',
+  class:'third-explain-container'
+}).appendTo('#thirdWrapper');
+$("<p>", {
+  text:'POSSE2にはゲームが好きな人も多いので',
+  class:' fade-in third-explain',
+ }).appendTo('#thirdExplainContainer');
+ $("<p>", {
+  text:'壁当てや五目並べなど楽しいゲームを共に切磋琢磨しながら作ることができます',
+  class:' fade-in third-explain',
+ }).appendTo('#thirdExplainContainer');
+ $("<p>", {
+  text:'実際に製作したものです是非プレイしてみてください！！',
+  class:' fade-in third-explain',
+ }).appendTo('#thirdExplainContainer');
+
+ $("<div>", {
+  id: 'gameButtonContainer',
+  class:'game-button-container'
+}).appendTo('#thirdWrapper');
+$("<a>", {
+  href:"/src/html/products.html",
+  text:'click to play',
+  class:' fade-in game-button',
+ }).appendTo('#gameButtonContainer');
+
+
+//  4ページ目
+$("<div>", {
+  id: 'forthWrapper',
+  class:'forth-page-wrapper'
+}).appendTo('#4');
+$("<div>", {
+  id: 'forthContainer',
+  class:'forth-container'
+}).appendTo('#forthWrapper');
+$("<div>", {
+  id: 'forthRightContainer',
+  class:'forth-right-container'
+}).appendTo('#forthContainer');
+$("<p>", {
+  text:'#4',
+  class:' fade-in forth-right-sub',
+ }).appendTo('#forthRightContainer');
+$("<p>", {
+  text:'自分の性格は',
+  class:' fade-in forth-right-title',
+ }).appendTo('#forthRightContainer');
+
+$("<div>", {
+  id: 'forthLeftContainer',
+  class:'forth-left-container'
+}).appendTo('#forthContainer');
+$("<p>", {
+  text:'POSSE2で',
+  class:' fade-in forth-left-title',
+ }).appendTo('#forthLeftContainer');
+ $("<p>", {
+  text:'どうやって活かされるだろう',
+  class:' fade-in forth-left-title',
+ }).appendTo('#forthLeftContainer');
+
+ $("<div>", {
+  id: 'forthButtonContainer',
+  class:'forth-button-container'
+}).appendTo('#forthContainer');
+$("<a>", {
+  href:'/src/html/free.html',
+  id:'forthButton',
+  text:'診断する',
+  class:' fade-in forth-button',
+ }).appendTo('#forthButtonContainer');
+
+
+ 
+ 
+
+  }
+  else if(index+1===5){
+
+    $("body").append('<header id="header"><h1 class="logo"><a href="#"><img src="/src/image/10.png" alt="Travel Blog" /></a></h1><ul><div class="lists"><li><a href="/src/html/top.html" class="list hover_action">Home</a></li><li><a href="/src/html/ayumi.html" class="list hover_action">Timeline</a></li><li><a href="/src/html/products.html" class="list hover_action">Products</a></li><li><a href="/src/html/free.html" class="list hover_action">Free</a></li></div></ul></header>');}
+  
+//  $section.eq(index).children('div').addClass('is-show');
   
 
 

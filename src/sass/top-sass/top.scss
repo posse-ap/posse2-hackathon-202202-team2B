@@ -1,10 +1,14 @@
 @use "../partial-sass/header";
 @use "../partial-sass/footer";
 @use "./scroll";
+
+
 html{
     font-size: 6.25%;
     background: fixed;
 }
+
+
 
 
 body{
@@ -136,7 +140,7 @@ button:hover {
     display: block;
     width: 300px;
     height: 70px;
-    margin: 40px auto 0;
+    margin: 40rem auto 0;
     color: #fff;
     background: #FF5757;
     box-shadow: 0 8px 15px 0 #000;
@@ -300,7 +304,9 @@ button.btn {
 }
 
 
-
+.last-page{
+padding-top: 600rem;
+}
 
 // ここからfooter
 
